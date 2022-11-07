@@ -9,5 +9,15 @@
 import React from 'react';
 
 export function renderHelp() {
-    return (<div><div><a href="/html/webgishelp.pdf" target="_blank">Anleitung (PDF)</a></div><div>QWC2 build {process.env.BuildDate}</div></div>);
+    return (
+        <div>
+            <div>
+                <a href="/html/webgishelp.pdf" target="_blank">Anleitung (PDF)</a>
+            </div>
+            <div>QWC2 build {process.env.BuildDate}</div>
+            <div>
+                <a href={process.env.QWC2RepoSource}>Verwendete QWC2 Version</a>
+            </div>
+        </div>
+    );
 }
