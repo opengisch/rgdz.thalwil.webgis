@@ -12,7 +12,7 @@ export function renderHelp() {
     return (
         <div>
             <div>
-                <a href="/html/webgishelp.pdf" target="_blank">Anleitung (PDF)</a>
+                <a href="/static_files/help/webgishelp.pdf" target="_blank">Anleitung (PDF)</a>
             </div>
             <div>QWC2 build {process.env.BuildDate}</div>
             <div>
