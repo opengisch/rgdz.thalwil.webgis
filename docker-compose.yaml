@@ -1,0 +1,16 @@
+services:
+  rgdz-thalwil-webgis-dev:
+    build:
+      context: .
+      target: builder
+    ports:
+      - "8080:8080"
+    command: ["/usr/bin/make", "clean", "serve-dev"]
+    environment:
+      - WATCHPACK_POLLING=true
+    volumes:
+      - ./customer_config/config.json:/app/static/config.json
+      - ./customer_config/themes.json:/app/static/themes.json
+      - ./app/js/Help.jsx:/app/js/Help.jsx
+      - ./app/js/SearchProviders.js:/app/js/SearchProviders.js
+      - ./app/index.html:/app/index.html
