@@ -1,5 +1,5 @@
 services:
-  rgdz-thalwil-webgis-dev:
+  webgis_dev:
     build:
       context: .
       target: builder
@@ -14,3 +14,9 @@ services:
       - ./app/js/Help.jsx:/app/js/Help.jsx
       - ./app/js/SearchProviders.js:/app/js/SearchProviders.js
       - ./app/index.html:/app/index.html
+  proxy:
+    image: nginx
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./dev/nginx_proxy.conf:/etc/nginx/nginx.conf
