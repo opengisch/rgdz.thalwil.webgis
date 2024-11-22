@@ -47,12 +47,12 @@
     "textFont": "11pt sans-serif"
   },
   "importLayerUrlPresets": [
-      {"label": "Swisstopo WMTS", "value": "https://wmts10.geo.admin.ch/EPSG/2056/1.0.0/WMTSCapabilities.xml"},
-      {"label": "OEREB",          "value": "https://wms.zh.ch/OerebKatasterZHWMS?SERVICE=WMS&Request=GetCapabilities"} ,
-      {"label": "Velonetz",       "value": "https://wms.zh.ch/VelonetzZHWMS?SERVICE=WMS&Request=GetCapabilities"} ,
-      {"label": "Gewässerschutz",     "value": "https://wms.zh.ch/AWELWWgwsZHWMS?Service=WMS&Request=GetCapabilities"},
-      {"label": "OGDOrthoZH",     "value": "https://wms.zh.ch/OGDOrthoZH?SERVICE=WMS&Request=GetCapabilities"}
- ],
+    {"label": "Swisstopo WMTS", "value": "https://wmts10.geo.admin.ch/EPSG/2056/1.0.0/WMTSCapabilities.xml"},
+    {"label": "OEREB",          "value": "https://wms.zh.ch/OerebKatasterZHWMS?SERVICE=WMS&Request=GetCapabilities"} ,
+    {"label": "Velonetz",       "value": "https://wms.zh.ch/VelonetzZHWMS?SERVICE=WMS&Request=GetCapabilities"} ,
+    {"label": "Gewässerschutz",     "value": "https://wms.zh.ch/AWELWWgwsZHWMS?Service=WMS&Request=GetCapabilities"},
+    {"label": "OGDOrthoZH",     "value": "https://wms.zh.ch/OGDOrthoZH?SERVICE=WMS&Request=GetCapabilities"}
+  ],
   "projections": [
     {
       "code": "EPSG:32632",
@@ -81,461 +81,296 @@
     }
   ],
   "plugins": {
-      "mobile": [
-        {
-          "name": "Map",
-          "cfg": {
-            "mapOptions": {
-              "zoomDuration": 250,
-              "enableRotation": true
-            },
-            "toolsOptions": {
-              "OverviewSupport": {
-                "tipLabel": "Overview"
-              },
-              "LocateSupport": {
-                "keepCurrentZoomLevel": true,
-                "startupMode": "DISABLED"
-              },
-              "ScaleBarSupport": {
-                "units": "metric"
-              }
-            }
-          }
-        },
-        {
-          "name": "HomeButton",
-          "cfg": {
-            "position": 2
-          }
-        },
-        {
-          "name": "LocateButton",
-          "cfg": {
-            "position": 1
-          }
-        },
-        {
-          "name": "BackgroundSwitcher",
-          "cfg": {
-            "position": 0
-          }
-        },
-        {
-            "name": "TopBar",
-            "cfg": {
-              "menuItems": [
-                {"key": "ThemeSwitcher", "icon": "themes"},
-                {"key": "LayerTree", "icon": "layers"},
-                {"key": "Share", "icon": "share"},
-                {"key": "Tools", "icon": "tools", "subitems": [
-                  {"key": "Identify", "icon": "identify_region", "mode": "Region"},
-                  {"key": "Measure", "icon": "measure"},
-                  {"key": "Redlining", "icon": "draw"},
-                  {"key": "RasterExport", "icon": "rasterexport"}
-                ]},
-                {"key": "Print", "icon": "print"},
-                {"key": "Help", "icon": "info"}
-              ],
-              "searchOptions": {
-                "minScaleDenom": 1000,
-                "showProviderSelection": true,
-                "providerSelectionAllowAll": true,
-                "zoomToLayers": false,
-                "showProvidersInPlaceholder": false
-              },
-              "appMenuClearsTask": true,
-              "appMenuFilterField": true,
-              "appMenuVisibleOnStartup": false
-            }
-        },
-        {
-          "name": "ThemeSwitcher",
-          "cfg": {
-            "collapsibleGroups": true
-          }
-        },
-        {
-          "name": "Measure",
-          "cfg": {
-            "showMeasureModeSwitcher": true
-          }
-        },
-        {
-          "name": "BottomBar",
-          "cfg": {
-            "displayCoordinates": false,
-            "displayScales": false,
-            "viewertitleUrl": "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf",
-            "termsUrl":  "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf"
-          }
-        },
-        {
-          "name": "Identify",
-          "cfg": {
-            "params": {
-              "FI_POINT_TOLERANCE": 32,
-              "FI_LINE_TOLERANCE": 16,
-              "FI_POLYGON_TOLERANCE": 8,
-              "feature_count": 20,
-              "region_feature_count": 100,
-              "with_maptip": true
-            },
-            "enableExport": true,
-            "longAttributesDisplay": "wrap",
-            "displayResultTree": false,
-            "featureInfoReturnsLayerName": true
-          }
-        },
-        {
-          "name": "Share",
-          "cfg": {
-            "showSocials": false,
-            "showLink": true,
-            "showQRCode": false
+    "common": [
+      {
+        "name": "Map",
+        "cfg": {
+          "mapOptions": {
+            "zoomDuration": 250,
+            "enableRotation": true,
+            "panStepSize": 0.25,
+            "panPageSize": 0.1,
+            "constrainExtent": false
           },
-          "mapClickAction": "identify"
-        },
-        {
-          "name": "Print",
-          "cfg": {
-            "inlinePrintOutput": false,
-            "printExternalLayers": true,
-            "gridInitiallyEnabled": false
-          }
-        },
-        {
-          "name": "Help",
-          "mapClickAction": "identify"
-        },
-        {
-          "name": "MapCopyright"
-        },
-        {
-          "name": "LayerTree",
-          "cfg": {
-            "showLegendIcons": true,
-            "showRootEntry": true,
-            "showQueryableIcon": true,
-            "allowMapTips": true,
-            "allowCompare": true,
-            "allowImport": true,
-            "groupTogglesSublayers": false,
-            "grayUnchecked": false,
-            "layerInfoWindowSize": {"width": 480, "height": 400},
-            "bboxDependentLegend": true,
-            "scaleDependentLegend": "theme"
+          "toolsOptions": {
+            "OverviewSupport": {
+              "tipLabel": "Overview"
+            },
+            "LocateSupport": {
+              "keepCurrentZoomLevel": true,
+              "stopFollowingOnDrag": true,
+              "startupMode": "DISABLED"
+            },
+            "ScaleBarSupport": {
+              "units": "metric"
+            }
           },
-          "mapClickAction": "unset"
-        },
-        {
-          "name": "DxfExport"
-        },
-        {
-          "name": "RasterExport",
-          "cfg": {
-            "dpis": [96, 300],
-            "exportExternalLayers": true
-          }
-        },
-        {
-          "name": "Redlining"
-        },
-        {
-          "name": "Editing"
-        },
-        {
-          "name": "MapCompare"
-        },
-        {
-          "name": "HeightProfile",
-          "cfg": {
-            "heighProfilePrecision": 0
-          }
-        },
-        {
-          "name": "MapInfoTooltip",
-          "cfg": {
-            "elevationPrecision": 0,
-            "includeWGS84": true
-          }
-        },
-        {
-          "name": "StartupMarker",
-          "cfg": {
-            "removeMode": "onclickonmarker"
-          }
-        },
-        {
-          "name": "LayerCatalog",
-          "cfg": {
-              "catalogUrl": "https://ycas.ch/qwc/catalog.json"
-          }
-        },
-        {
-          "name": "Bookmark"
+          "swipeGeometryTypeBlacklist": ["Point"],
+          "swipeLayerNameBlacklist": ["*_noswipe"]
         }
-      ],
-      "desktop": [
-        {
-          "name": "Map",
-          "cfg": {
-            "mapOptions": {
-              "zoomDuration": 250,
-              "enableRotation": true
-            },
-            "toolsOptions": {
-              "OverviewSupport": {
-                "tipLabel": "Overview"
-              },
-              "LocateSupport": {
-                "keepCurrentZoomLevel": true,
-                "stopFollowingOnDrag": true,
-                "startupMode": "DISABLED"
-              },
-              "ScaleBarSupport": {
-                "units": "metric"
-              }
-            },
-            "swipeGeometryTypeBlacklist": ["Point"],
-            "swipeLayerNameBlacklist": ["*_noswipe"]
-          }
-        },
-        {
-          "name": "TaskButton",
-          "cfg": {
-            "position": 5,
-            "task": "LayerTree",
-            "icon": "list-alt"
-          }
-        },
-        {
-          "name": "TaskButton",
-          "cfg": {
-            "position": 6,
-            "task": "Editing",
-            "icon": "editing"
-          }
-        },
-        {
-          "name": "HomeButton",
-          "cfg": {
-            "position": 4
-          }
-        },
-        {
-          "name": "LocateButton",
-          "cfg": {
-            "position": 3
-          }
-        },
-        {
-          "name": "ZoomIn",
-          "cfg": {
-            "position": 2
-          }
-        },
-        {
-          "name": "ZoomOut",
-          "cfg": {
-            "position": 1
-          }
-        },
-        {
-          "name": "BackgroundSwitcher",
-          "cfg": {
-            "position": 0
-          }
-        },
-        {
-            "name": "TopBar",
-            "cfg": {
-              "menuItems": [
-                {"key": "ThemeSwitcher", "icon": "themes"},
-                {"key": "LayerTree", "icon": "layers"},
-                {"key": "Share", "icon": "share"},
-                {"key": "Tools", "icon": "tools", "subitems": [
-                  {"key": "Identify", "icon": "identify_region", "mode": "Region"},
-                  {"key": "Measure", "icon": "measure"},
-                  {"key": "Redlining", "icon": "draw"},
-                  {"key": "RasterExport", "icon": "rasterexport"}
-                ]},
-                {"key": "Print", "icon": "print"},
-                {"key": "Help", "icon": "info"}
-              ],
-              "toolbarItems": [
-                {"key": "Measure", "mode": "LineString", "icon": "measure_line"},
-                {"key": "Measure", "mode": "Polygon", "icon": "measure_polygon"},
-                {"key": "Print", "icon": "print"},
-                {"key": "Identify", "icon": "identify_region", "mode": "Region"}
-              ],
-              "searchOptions": {
-                "minScaleDenom": 1000,
-                "showProviderSelection": true,
-                "providerSelectionAllowAll": true,
-                "zoomToLayers": false,
-                "showProvidersInPlaceholder": false
-              },
-              "appMenuClearsTask": true,
-              "appMenuFilterField": true,
-              "appMenuVisibleOnStartup": false,
-              "logoUrl": "/"
-            }
-        },
-        {
-          "name": "BottomBar",
-          "cfg": {
-            "viewertitleUrl": "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf",
-            "viewertitleUrlTarget": "iframe",
-            "termsUrl":  "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf",
-            "viewertitleUrlTarget": "_blank"
-          }
-        },
-        {
-          "name": "Measure",
-          "cfg": {
-            "showMeasureModeSwitcher": true
-          }
-        },
-        {
-          "name": "ThemeSwitcher",
-          "cfg": {
-            "collapsibleGroups": true
-          }
-        },
-        {
-          "name": "LayerTree",
-          "cfg": {
-            "showLegendIcons": true,
-            "showRootEntry": true,
-            "showQueryableIcon": true,
-            "allowMapTips": true,
-            "allowCompare": true,
-            "allowImport": true,
-            "groupTogglesSublayers": false,
-            "grayUnchecked": false,
-            "layerInfoWindowSize": {"width": 480, "height": 400},
-            "bboxDependentLegend": true,
-            "scaleDependentLegend": "theme",
-            "showToggleAllLayersCheckbox": true
+      },
+      {
+        "name": "HomeButton",
+        "cfg": {
+          "position": 4
+        }
+      },
+      {
+        "name": "LocateButton",
+        "cfg": {
+          "position": 3
+        }
+      },
+      {
+        "name": "BackgroundSwitcher",
+        "cfg": {
+          "position": 0
+        }
+      },
+      {
+        "name": "TopBar",
+        "cfg": {
+          "menuItems": [
+            {"key": "ThemeSwitcher", "icon": "themes", "shortcut": "alt+shift+t"},
+            {"key": "LayerTree", "icon": "layers", "shortcut": "alt+shift+l"},
+            {"key": "Share", "icon": "share", "shortcut": "alt+shift+s"},
+            {"key": "Tools", "icon": "tools", "subitems": [
+              {"key": "Identify", "icon": "identify_region", "mode": "Region"},
+              {"key": "Measure", "icon": "measure"},
+              {"key": "Redlining", "icon": "draw"},
+              {"key": "RasterExport", "icon": "rasterexport"}
+            ]},
+            {"key": "Print", "icon": "print", "shortcut": "alt+shift+p"},
+            {"key": "Help", "icon": "info", "shortcut": "alt+shift+h"}
+          ],
+          "searchOptions": {
+            "allowSearchFilters": false,
+            "minScaleDenom": 1000,
+            "zoomToLayers": false,
+            "showProvidersInPlaceholder": false
           },
-          "mapClickAction": "identify"
+          "appMenuClearsTask": true,
+          "appMenuFilterField": true,
+          "appMenuVisibleOnStartup": false,
+          "logoUrl": "/",
+          "appMenuShortcut": "alt+shift+m",
+          "toolbarItemsShortcutPrefix": "alt+shift"
+        }
+      },
+      {
+        "name": "BottomBar",
+        "cfg": {
+          "viewertitleUrl": "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf",
+          "termsUrl": "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf",
+          "viewertitleUrlTarget": "_blank"
+        }
+      },
+      {
+        "name": "Measure",
+        "cfg": {
+          "showMeasureModeSwitcher": true
+        }
+      },
+      {
+        "name": "ThemeSwitcher",
+        "cfg": {
+          "collapsibleGroups": true
+        }
+      },
+      {
+        "name": "LayerTree",
+        "cfg": {
+          "showLegendIcons": true,
+          "showRootEntry": true,
+          "showQueryableIcon": true,
+          "allowMapTips": true,
+          "allowCompare": true,
+          "allowImport": true,
+          "groupTogglesSublayers": false,
+          "grayUnchecked": false,
+          "layerInfoWindowSize": {"width": 480, "height": 400},
+          "bboxDependentLegend": true,
+          "scaleDependentLegend": "theme",
+          "showToggleAllLayersCheckbox": true,
+          "extraLegendParameters": ""
         },
-        {
-          "name": "Identify",
-          "cfg": {
-            "params": {
-              "FI_POINT_TOLERANCE": 16,
-              "FI_LINE_TOLERANCE": 8,
-              "FI_POLYGON_TOLERANCE": 4,
-              "feature_count": 20,
-              "region_feature_count": 100,
-              "with_maptip": true
-            },
-            "enableExport": true,
-            "longAttributesDisplay": "wrap",
-            "displayResultTree": false,
-            "featureInfoReturnsLayerName": true,
+        "mapClickAction": "identify"
+      },
+      {
+        "name": "Identify",
+        "cfg": {
+          "params": {
+            "FI_POINT_TOLERANCE": 16,
+            "FI_LINE_TOLERANCE": 8,
+            "FI_POLYGON_TOLERANCE": 4,
+            "feature_count": 20,
+            "region_feature_count": 100,
+            "with_maptip": true
+          },
+          "enableExport": true,
+          "longAttributesDisplay": "wrap",
+          "displayResultTree": false,
+          "featureInfoReturnsLayerName": true,
+          "geometry": {
             "initialWidth": 480,
             "initialHeight": 550,
             "initialX": 0,
             "initialY": 0
           }
-        },
-        {
-          "name": "MapTip"
-        },
-        {
-          "name": "Share",
-          "cfg": {
-            "showSocials": false,
-            "showLink": true,
-            "showQRCode": false
-          },
-          "mapClickAction": "identify"
-        },
-        {
-          "name": "Print",
-          "cfg": {
-            "inlinePrintOutput": false,
-            "printExternalLayers": true,
-            "gridInitiallyEnabled": false
-          }
-        },
-        {
-          "name": "Help",
-          "mapClickAction": "identify"
-        },
-        {
-          "name": "MapCopyright",
-          "cfg": {
-              "showThemeCopyrightOnly": true
-          }
-        },
-        {
-          "name": "DxfExport",
-          "cfg": {
-              "serviceUrl": "http://127.0.0.1:8001/ows/dxf_geobau",
-              "layerOptions": [
-                  {"label": "Geobau", "layers": "dxfgeobau"},
-                  {"label": "Geobau + Höhenkurven", "layers": "dxfgeobau,hoehenkurven"}
-              ],
-              "formatOptions": "MODE:SYMBOLLAYERSYMBOLOGY;SCALE:500;NO_MTEXT:TEXT"
-          }
-        },
-        {
-          "name": "RasterExport",
-          "cfg": {
-            "dpis": [96, 300],
-            "exportExternalLayers": true
-          }
-        },
-        {
-          "name": "Redlining"
-        },
-        {
-          "name": "Editing"
-        },
-        {
-          "name": "MapCompare"
-        },
-        {
-          "name": "HeightProfile",
-          "cfg": {
-            "heighProfilePrecision": 0
-          }
-        },
-        {
-          "name": "MapInfoTooltip",
-          "cfg": {
-            "elevationPrecision": 0,
-            "includeWGS84": true
-          }
-        },
-        {
-          "name": "StartupMarker",
-          "cfg": {
-            "removeMode": "onclickonmarker"
-          }
+        }
       },
       {
-          "name": "API"
+        "name": "MapTip"
       },
       {
-          "name": "ScratchDrawing"
+        "name": "Share",
+        "cfg": {
+          "showSocials": false,
+          "showLink": true,
+          "showQRCode": false
+        },
+        "mapClickAction": "identify"
       },
       {
-          "name": "LayerCatalog",
-          "cfg": {
-              "catalogUrl": "https://ycas.ch/qwc/catalog.json"
-          }
+        "name": "Print",
+        "cfg": {
+          "inlinePrintOutput": false,
+          "printExternalLayers": true,
+          "gridInitiallyEnabled": false,
+          "allowGeoPdfExport": true,
+          "hideAutopopulatedFields": false
+        }
       },
       {
-          "name": "Bookmark"
+        "name": "Help",
+        "mapClickAction": "identify"
       },
       {
-          "name": "AttributeTable"
+        "name": "MapCopyright",
+        "cfg": {
+          "showThemeCopyrightOnly": true,
+          "prefixCopyrightsWithLayerName": false
+        }
+      },
+      {
+        "name": "DxfExport",
+        "cfg": {
+          "serviceUrl": "http://127.0.0.1:8001/ows/dxf_geobau",
+          "layerOptions": [
+            {"label": "Geobau", "layers": "dxfgeobau"},
+            {"label": "Geobau + Höhenkurven", "layers": "dxfgeobau,hoehenkurven"}
+          ],
+          "formatOptions": "MODE:SYMBOLLAYERSYMBOLOGY;SCALE:500;NO_MTEXT:TEXT"
+        }
+      },
+      {
+        "name": "RasterExport",
+        "cfg": {
+          "dpis": [96, 300],
+          "exportExternalLayers": true
+        }
+      },
+      {
+        "name": "Redlining"
+      },
+      {
+        "name": "Editing",
+        "cfg": {
+          "allowCloneGeometry": true
+        }
+      },
+      {
+        "name": "MapCompare"
+      },
+      {
+        "name": "HeightProfile",
+        "cfg": {
+          "heighProfilePrecision": 0
+        }
+      },
+      {
+        "name": "MapInfoTooltip",
+        "cfg": {
+          "elevationPrecision": 0,
+          "includeWGS84": true
+        }
+      },
+      {
+        "name": "StartupMarker",
+        "cfg": {
+          "removeMode": "onclickonmarker"
+        }
+      },
+      {
+        "name": "API"
+      },
+      {
+        "name": "ScratchDrawing"
+      },
+      {
+        "name": "LayerCatalog",
+        "cfg": {
+          "catalogUrl": "https://ycas.ch/qwc/catalog.json"
+        }
+      },
+      {
+        "name": "Bookmark"
+      },
+      {
+        "name": "AttributeTable"
       }
-      ]
+    ],
+    "mobile": [
+      {
+        "name": "BottomBar",
+        "cfg": {
+          "displayCoordinates": false,
+          "displayScales": false,
+          "viewertitleUrl": "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf",
+          "termsUrl":  "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf"
+        }
+      }
+    ],
+    "desktop": [
+      {
+        "name": "TaskButton",
+        "cfg": {
+          "position": 5,
+          "task": "LayerTree",
+          "icon": "list-alt"
+        }
+      },
+      {
+        "name": "TaskButton",
+        "cfg": {
+          "position": 6,
+          "task": "Editing",
+          "icon": "editing"
+        }
+      },
+      {
+        "name": "ZoomIn",
+        "cfg": {
+          "position": 2
+        }
+      },
+      {
+        "name": "ZoomOut",
+        "cfg": {
+          "position": 1
+        }
+      },
+      {
+        "name": "TopBar",
+        "cfg": {
+          "toolbarItems": [
+            {"key": "Measure", "mode": "LineString", "icon": "measure_line"},
+            {"key": "Measure", "mode": "Polygon", "icon": "measure_polygon"},
+            {"key": "Print", "icon": "print"},
+            {"key": "Identify", "icon": "identify_region", "mode": "Region"}
+          ]
+        }
+      }
+    ]
   }
 }
