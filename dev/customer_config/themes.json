@@ -220,7 +220,7 @@
           {
             "name": "ortsplan_rtlo_wms",
             "printLayer": "print_ortsplan_rtlo_wms",
-            "visibility": false
+            "visibility": true
           },
           {
             "name": "landeskarte_av",
@@ -230,7 +230,7 @@
           {
             "name": "pixelkarte",
             "printLayer": "print_pixelkarte",
-            "visibility": true
+            "visibility": false
           },
           {
             "name": "av_ktzh",
@@ -260,10 +260,10 @@
         ],
         "bbox": {
           "bounds": [
-            8.535469,
-            47.26917,
-            8.58902,
-            47.302063
+            8.543848,
+            47.284489,
+            8.574359,
+            47.294681
           ],
           "crs": "EPSG:4326"
         },
@@ -276,14 +276,6 @@
         },
         "description": "_",
         "drawingOrder": [
-          "print_landeskarte_av",
-          "print_av_ktzh",
-          "print_pixelkarte",
-          "print_uep_zh",
-          "print_orthofoto_2014",
-          "print_orthofoto_2018",
-          "print_orthofoto_2021",
-          "print_ortsplan_rtlo_wms",
           "gmdeflaeche",
           "v_lokalisationsnamepos_n",
           "v_lokalisationsnamepos_s",
@@ -319,18 +311,18 @@
           "lfp3",
           "lfp2",
           "lfp1",
-          "Parkfelder",
-          "Parkfeld",
-          "Brunnen",
-          "Parkzonen",
-          "Oeffentl.WC",
+          "parkfelder",
+          "parkfeld",
+          "brunnen",
+          "parkzonen",
+          "oeffentliches-wc",
           "poi_punkt",
           "haltestellen"
         ],
         "editConfig": null,
         "expanded": true,
         "externalLayers": [],
-        "featureInfoUrl": "https://maps.thalwil.ch/ows/th_ortsplan?",
+        "featureInfoUrl": "https://maps-test.thalwil.ch/ows/th_ortsplan?",
         "id": "th_ortsplan",
         "infoFormats": [
           "text/plain",
@@ -343,18 +335,18 @@
         ],
         "initialBbox": {
           "bounds": [
-            8.535469,
-            47.26917,
-            8.58902,
-            47.302063
+            8.543848,
+            47.284489,
+            8.574359,
+            47.294681
           ],
           "crs": "EPSG:4326"
         },
         "keywords": "",
-        "legendUrl": "https://maps.thalwil.ch/ows/th_ortsplan?",
+        "legendUrl": "https://maps-test.thalwil.ch/ows/th_ortsplan?",
         "mapCrs": "EPSG:2056",
         "minSearchScaleDenom": 500,
-        "name": "maps_th_ortsplan",
+        "name": "maps_th_av",
         "onlineResource": "www.thalwil.ch",
         "print": [
           {
@@ -415,7 +407,7 @@
           2500,
           5000
         ],
-        "printUrl": "https://maps.thalwil.ch/ows/th_ortsplan?",
+        "printUrl": "https://maps-test.thalwil.ch/ows/th_ortsplan?",
         "scales": [
           100000,
           50000,
@@ -449,1088 +441,485 @@
               {
                 "expanded": true,
                 "mutuallyExclusive": false,
-                "name": "Thalwil",
+                "name": "poi",
                 "sublayers": [
                   {
-                    "expanded": true,
-                    "mutuallyExclusive": false,
-                    "name": "POI",
-                    "sublayers": [
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.157224,
-                            47.141693,
-                            9.041589,
-                            47.848223
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "",
-                        "name": "haltestellen",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "haltestellen",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.538535,
-                            47.273903,
-                            8.579716,
-                            47.302573
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "bezeichnung",
-                        "geometryType": "Point",
-                        "maxScale": 10000,
-                        "minScale": 1,
-                        "name": "poi_punkt",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "poi_punkt",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.561688,
-                            47.283488,
-                            8.571894,
-                            47.300471
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "t_id",
-                        "geometryType": "Point",
-                        "maxScale": 5001,
-                        "minScale": 1,
-                        "name": "Oeffentl.WC",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "Oeffentl.WC",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.546257,
-                            47.281154,
-                            8.577978,
-                            47.301443
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "pz_bezeichnung",
-                        "geometryType": "MultiSurface",
-                        "maxScale": 8000,
-                        "minScale": 800,
-                        "name": "Parkzonen",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "Parkzonen",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.546516,
-                            47.276115,
-                            8.570633,
-                            47.302003
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "bemerkung",
-                        "geometryType": "Point",
-                        "maxScale": 5000,
-                        "minScale": 1,
-                        "name": "Brunnen",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "Brunnen",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.546268,
-                            47.281189,
-                            8.577855,
-                            47.301413
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "pf_nummer",
-                        "geometryType": "MultiSurface",
-                        "maxScale": 1001,
-                        "minScale": 501,
-                        "name": "Parkfeld",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "Parkfeld",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.546268,
-                            47.281189,
-                            8.577855,
-                            47.301413
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "id",
-                        "geometryType": "MultiSurface",
-                        "maxScale": 501,
-                        "minScale": 1,
-                        "name": "Parkfelder",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "Parkfelder",
-                        "visibility": true
-                      }
-                    ],
-                    "title": "POI"
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.157224,
+                        47.141693,
+                        9.041589,
+                        47.848223
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "",
+                    "name": "haltestellen",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "haltestellen",
+                    "visibility": true
                   },
                   {
-                    "expanded": false,
-                    "mutuallyExclusive": false,
-                    "name": "FPKT",
-                    "sublayers": [
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.535469,
-                            47.26917,
-                            8.58902,
-                            47.302063
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "t_id",
-                        "geometryType": "Point",
-                        "maxScale": 1500,
-                        "minScale": 0,
-                        "name": "lfp1",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "lfp1",
-                        "visibility": false
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.54975,
-                            47.279902,
-                            8.577207,
-                            47.297365
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dataUrl": "service='pg30_thalwil_qg_av_03_p' key='t_id' type=Point checkPrimaryKeyUnicity='1' table=\"av\".\"lfp1\" (geometrie) sql=",
-                        "dimensions": [],
-                        "displayField": "maptip",
-                        "geometryType": "Point",
-                        "maxScale": 1500,
-                        "minScale": 0,
-                        "name": "lfp2",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "lfp2",
-                        "visibility": false
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.542326,
-                            47.272724,
-                            8.579054,
-                            47.302157
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "t_id",
-                        "geometryType": "Point",
-                        "maxScale": 1500,
-                        "minScale": 0,
-                        "name": "lfp3",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "lfp3",
-                        "visibility": false
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.542326,
-                            47.272724,
-                            8.579054,
-                            47.302157
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "Point",
-                        "maxScale": 1500,
-                        "minScale": 0,
-                        "name": "lfp3_txt",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "lfp3_txt",
-                        "visibility": false
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.543276,
-                            47.275942,
-                            8.579628,
-                            47.300541
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "t_id",
-                        "geometryType": "Point",
-                        "maxScale": 1500,
-                        "minScale": 0,
-                        "name": "hfp3",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "hfp3",
-                        "visibility": false
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.543276,
-                            47.275942,
-                            8.579628,
-                            47.300541
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "Point",
-                        "maxScale": 1500,
-                        "minScale": 0,
-                        "name": "hfp3_txt",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "hfp3_txt",
-                        "visibility": false
-                      }
-                    ],
-                    "title": "FPKT"
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.538535,
+                        47.273903,
+                        8.579716,
+                        47.302573
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "bezeichnung",
+                    "geometryType": "Point",
+                    "maxScale": 10000,
+                    "minScale": 1,
+                    "name": "poi_punkt",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "poi_punkt",
+                    "visibility": true
                   },
                   {
-                    "expanded": false,
-                    "mutuallyExclusive": false,
-                    "name": "LIEG",
-                    "sublayers": [
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.542219,
-                            47.27257,
-                            8.580083,
-                            47.302329
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "Point",
-                        "maxScale": 1900,
-                        "minScale": 240,
-                        "name": "grundstueckpos",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "grundstueckpos",
-                        "visibility": false
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.542233,
-                            47.272713,
-                            8.580083,
-                            47.30242
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "identifikator",
-                        "geometryType": "Point",
-                        "maxScale": 1500,
-                        "minScale": 0,
-                        "name": "Grenzpunkt",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "grenzpunkt",
-                        "visibility": false
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.541882,
-                            47.272355,
-                            8.590095,
-                            47.306614
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "aname",
-                        "geometryType": "Point",
-                        "maxScale": 1500,
-                        "minScale": 0,
-                        "name": "hoheitsgrenzpunkt",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "hoheitsgrenzpunkt",
-                        "visibility": false
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.543693,
-                            47.283148,
-                            8.569198,
-                            47.300963
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "Point",
-                        "maxScale": 1500,
-                        "minScale": 0,
-                        "name": "projgrundstueckpos",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "projgrundstueckpos",
-                        "visibility": false
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.54257,
-                            47.28083,
-                            8.569683,
-                            47.301797
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "nummer",
-                        "geometryType": "CurvePolygon",
-                        "maxScale": 5000,
-                        "minScale": 0,
-                        "name": "liegenschaft_projektiert",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "liegenschaft_projektiert",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.541882,
-                            47.272448,
-                            8.580159,
-                            47.302455
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "nummer",
-                        "geometryType": "CurvePolygon",
-                        "maxScale": 10000,
-                        "minScale": 0,
-                        "name": "liegenschaft",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "liegenschaft",
-                        "visibility": true
-                      }
-                    ],
-                    "title": "LIEG"
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.562298,
+                        47.283488,
+                        8.571894,
+                        47.300465
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "t_id",
+                    "geometryType": "Point",
+                    "maxScale": 5001,
+                    "minScale": 1,
+                    "name": "oeffentliches-wc",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "oeffentliches-wc",
+                    "visibility": true
                   },
                   {
-                    "expanded": false,
-                    "mutuallyExclusive": false,
-                    "name": "EINZ",
-                    "sublayers": [
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.544708,
-                            47.280603,
-                            8.579236,
-                            47.302159
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "Point",
-                        "maxScale": 5000,
-                        "minScale": 0,
-                        "name": "v_eo_objektnummerpos",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "v_eo_objektnummerpos",
-                        "visibility": false
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.554666,
-                            47.288876,
-                            8.57,
-                            47.297334
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "Point",
-                        "maxScale": 5000,
-                        "minScale": 0,
-                        "name": "v_eo_punktelement",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "v_eo_punktelement",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.544854,
-                            47.273954,
-                            8.574844,
-                            47.301516
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "Point",
-                        "maxScale": 5000,
-                        "minScale": 0,
-                        "name": "v_eo_objektnamepos",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "v_eo_objektnamepos",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.544641,
-                            47.279722,
-                            8.579241,
-                            47.302039
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "CompoundCurve",
-                        "maxScale": 5000,
-                        "minScale": 0,
-                        "name": "v_eo_linienelement_gmaf",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "v_eo_linienelement_gmaf",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.54324,
-                            47.272525,
-                            8.579646,
-                            47.302272
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "CompoundCurve",
-                        "name": "v_eo_linienelement_bahn",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "v_eo_linienelement_bahn",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.54324,
-                            47.272525,
-                            8.579646,
-                            47.302272
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "CompoundCurve",
-                        "maxScale": 5000,
-                        "minScale": 0,
-                        "name": "v_eo_linienelement_alle",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "v_eo_linienelement_alle",
-                        "visibility": true
-                      }
-                    ],
-                    "title": "EINZ"
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.546257,
+                        47.281154,
+                        8.577978,
+                        47.301443
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "pz_bezeichnung",
+                    "geometryType": "MultiSurface",
+                    "maxScale": 8000,
+                    "minScale": 1000,
+                    "name": "parkzonen",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "parkzonen",
+                    "visibility": true
                   },
                   {
-                    "expanded": false,
-                    "mutuallyExclusive": false,
-                    "name": "BODB",
-                    "sublayers": [
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.548416,
-                            47.281185,
-                            8.574549,
-                            47.299678
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "Point",
-                        "maxScale": 1500,
-                        "minScale": 0,
-                        "name": "v_projgebaeudenummerpos",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "v_projgebaeudenummerpos",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.543263,
-                            47.272642,
-                            8.579991,
-                            47.302143
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "Point",
-                        "name": "v_bo_objektnamepos",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "v_bo_objektnamepos",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.542466,
-                            47.272634,
-                            8.579998,
-                            47.300934
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "Point",
-                        "maxScale": 1500,
-                        "minScale": 0,
-                        "name": "v_boflaechesymbol",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "v_boflaechesymbol",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.543696,
-                            47.275948,
-                            8.579688,
-                            47.302321
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "Point",
-                        "maxScale": 1500,
-                        "minScale": 240,
-                        "name": "v_gebaeudenummerpos",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "v_gebaeudenummerpos",
-                        "visibility": false
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.535469,
-                            47.26917,
-                            8.58902,
-                            47.302063
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "Point",
-                        "maxScale": 1500,
-                        "minScale": 0,
-                        "name": "v_gebauedenamepos",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "v_gebauedenamepos",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.543679,
-                            47.275966,
-                            8.579623,
-                            47.302329
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "Point",
-                        "maxScale": 1500,
-                        "minScale": 240,
-                        "name": "v_hausnummerpos",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "v_hausnummerpos",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.543485,
-                            47.275974,
-                            8.579591,
-                            47.302341
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "maptip",
-                        "geometryType": "Point",
-                        "maxScale": 1000,
-                        "minScale": 0,
-                        "name": "gebaeudeeingang",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "gebaeudeeingang",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.541882,
-                            47.272448,
-                            8.580158,
-                            47.302423
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "CurvePolygon",
-                        "name": "boflaeche_solid",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "boflaeche_solid",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.541882,
-                            47.272448,
-                            8.580159,
-                            47.302466
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "CurvePolygon",
-                        "name": "boflaeche",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "boflaeche",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.547611,
-                            47.277729,
-                            8.576806,
-                            47.300821
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "CurvePolygon",
-                        "maxScale": 5000,
-                        "minScale": 0,
-                        "name": "proj_boflaeche",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "proj_boflaeche",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.542899,
-                            47.275904,
-                            8.579821,
-                            47.302358
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "t_flaeche",
-                        "geometryType": "CurvePolygon",
-                        "maxScale": 50000,
-                        "minScale": 0,
-                        "name": "gebaeude",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "gebaeude",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.54253,
-                            47.272518,
-                            8.580152,
-                            47.30246
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "displayField": "art_txt",
-                        "geometryType": "CurvePolygon",
-                        "maxScale": 5000,
-                        "minScale": 0,
-                        "name": "einzelobjekt",
-                        "opacity": 255,
-                        "queryable": true,
-                        "title": "einzelobjekt",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.544631,
-                            47.279362,
-                            8.580126,
-                            47.302107
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "CurvePolygon",
-                        "maxScale": 5000,
-                        "minScale": 0,
-                        "name": "v_eo_flaechenelement_gmaf",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "v_eo_flaechenelement_gmaf",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.542033,
-                            47.272621,
-                            8.580152,
-                            47.302465
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "CurvePolygon",
-                        "maxScale": 5000,
-                        "minScale": 0,
-                        "name": "boflaeche_dashed",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "boflaeche_dashed",
-                        "visibility": true
-                      }
-                    ],
-                    "title": "BODB"
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.543848,
+                        47.284489,
+                        8.574359,
+                        47.294681
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "bemerkung",
+                    "geometryType": "Point",
+                    "maxScale": 5000,
+                    "minScale": 1,
+                    "name": "brunnen",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "brunnen",
+                    "visibility": true
                   },
                   {
-                    "expanded": false,
-                    "mutuallyExclusive": false,
-                    "name": "LOKA",
-                    "sublayers": [
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.546192,
-                            47.282558,
-                            8.547513,
-                            47.286874
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "Point",
-                        "maxScale": 2500,
-                        "minScale": 0,
-                        "name": "v_lokalisationsnamepos_s",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "v_lokalisationsnamepos_s",
-                        "visibility": true
-                      },
-                      {
-                        "abstract": "",
-                        "attribution": {
-                          "OnlineResource": "",
-                          "Title": ""
-                        },
-                        "bbox": {
-                          "bounds": [
-                            8.543139,
-                            47.274082,
-                            8.578632,
-                            47.30171
-                          ],
-                          "crs": "EPSG:4326"
-                        },
-                        "dimensions": [],
-                        "geometryType": "Point",
-                        "maxScale": 2500,
-                        "minScale": 0,
-                        "name": "v_lokalisationsnamepos_n",
-                        "opacity": 255,
-                        "queryable": false,
-                        "title": "v_lokalisationsnamepos_n",
-                        "visibility": true
-                      }
-                    ],
-                    "title": "LOKA"
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.546268,
+                        47.281189,
+                        8.577855,
+                        47.301413
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "pf_nummer",
+                    "geometryType": "MultiSurface",
+                    "maxScale": 1001,
+                    "minScale": 501,
+                    "name": "parkfeld",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "parkfeld",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.546268,
+                        47.281189,
+                        8.577855,
+                        47.301413
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "pf_nummer",
+                    "geometryType": "MultiSurface",
+                    "maxScale": 501,
+                    "minScale": 1,
+                    "name": "parkfelder",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "parkfelder",
+                    "visibility": true
+                  }
+                ],
+                "title": "poi"
+              },
+              {
+                "expanded": false,
+                "mutuallyExclusive": false,
+                "name": "FPKT",
+                "sublayers": [
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.543848,
+                        47.284489,
+                        8.574359,
+                        47.294681
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "t_id",
+                    "geometryType": "Point",
+                    "maxScale": 1500,
+                    "minScale": 0,
+                    "name": "lfp1",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "lfp1",
+                    "visibility": false
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.54975,
+                        47.279902,
+                        8.577207,
+                        47.297365
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dataUrl": "service='pg30_thalwil_qg_av_03_p' key='t_id' type=Point checkPrimaryKeyUnicity='1' table=\"av\".\"lfp1\" (geometrie) sql=",
+                    "dimensions": [],
+                    "displayField": "maptip",
+                    "geometryType": "Point",
+                    "maxScale": 1500,
+                    "minScale": 0,
+                    "name": "lfp2",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "lfp2",
+                    "visibility": false
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.542326,
+                        47.272724,
+                        8.579054,
+                        47.302157
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "t_id",
+                    "geometryType": "Point",
+                    "maxScale": 1500,
+                    "minScale": 0,
+                    "name": "lfp3",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "lfp3",
+                    "visibility": false
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.542326,
+                        47.272724,
+                        8.579054,
+                        47.302157
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "Point",
+                    "maxScale": 1500,
+                    "minScale": 0,
+                    "name": "lfp3_txt",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "lfp3_txt",
+                    "visibility": false
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.543276,
+                        47.275942,
+                        8.579628,
+                        47.300541
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "t_id",
+                    "geometryType": "Point",
+                    "maxScale": 1500,
+                    "minScale": 0,
+                    "name": "hfp3",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "hfp3",
+                    "visibility": false
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.543276,
+                        47.275942,
+                        8.579628,
+                        47.300541
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "Point",
+                    "maxScale": 1500,
+                    "minScale": 0,
+                    "name": "hfp3_txt",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "hfp3_txt",
+                    "visibility": false
+                  }
+                ],
+                "title": "FPKT"
+              },
+              {
+                "expanded": false,
+                "mutuallyExclusive": false,
+                "name": "LIEG",
+                "sublayers": [
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.542219,
+                        47.27257,
+                        8.580083,
+                        47.302329
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "Point",
+                    "maxScale": 1900,
+                    "minScale": 240,
+                    "name": "grundstueckpos",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "grundstueckpos",
+                    "visibility": false
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.542233,
+                        47.272713,
+                        8.580083,
+                        47.30242
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "identifikator",
+                    "geometryType": "Point",
+                    "maxScale": 1500,
+                    "minScale": 0,
+                    "name": "Grenzpunkt",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "grenzpunkt",
+                    "visibility": false
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.541882,
+                        47.272355,
+                        8.590095,
+                        47.306614
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "aname",
+                    "geometryType": "Point",
+                    "maxScale": 1500,
+                    "minScale": 0,
+                    "name": "hoheitsgrenzpunkt",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "hoheitsgrenzpunkt",
+                    "visibility": false
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.543693,
+                        47.283148,
+                        8.569198,
+                        47.300963
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "Point",
+                    "maxScale": 1500,
+                    "minScale": 0,
+                    "name": "projgrundstueckpos",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "projgrundstueckpos",
+                    "visibility": false
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.54257,
+                        47.28083,
+                        8.569683,
+                        47.301797
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "nummer",
+                    "geometryType": "CurvePolygon",
+                    "maxScale": 5000,
+                    "minScale": 0,
+                    "name": "liegenschaft_projektiert",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "liegenschaft_projektiert",
+                    "visibility": true
                   },
                   {
                     "abstract": "",
@@ -1548,23 +937,641 @@
                       "crs": "EPSG:4326"
                     },
                     "dimensions": [],
+                    "displayField": "nummer",
                     "geometryType": "CurvePolygon",
-                    "name": "gmdeflaeche",
+                    "maxScale": 10000,
+                    "minScale": 0,
+                    "name": "liegenschaft",
                     "opacity": 255,
-                    "queryable": false,
-                    "title": "gmdeflaeche",
+                    "queryable": true,
+                    "title": "liegenschaft",
                     "visibility": true
                   }
                 ],
-                "title": "Thalwil"
+                "title": "LIEG"
+              },
+              {
+                "expanded": false,
+                "mutuallyExclusive": false,
+                "name": "EINZ",
+                "sublayers": [
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.544708,
+                        47.280603,
+                        8.579236,
+                        47.302159
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "Point",
+                    "maxScale": 5000,
+                    "minScale": 0,
+                    "name": "v_eo_objektnummerpos",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "v_eo_objektnummerpos",
+                    "visibility": false
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.554666,
+                        47.288876,
+                        8.57,
+                        47.297334
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "Point",
+                    "maxScale": 5000,
+                    "minScale": 0,
+                    "name": "v_eo_punktelement",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "v_eo_punktelement",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.544854,
+                        47.273954,
+                        8.574844,
+                        47.301516
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "Point",
+                    "maxScale": 5000,
+                    "minScale": 0,
+                    "name": "v_eo_objektnamepos",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "v_eo_objektnamepos",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.544641,
+                        47.279722,
+                        8.579241,
+                        47.302039
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "CompoundCurve",
+                    "maxScale": 5000,
+                    "minScale": 0,
+                    "name": "v_eo_linienelement_gmaf",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "v_eo_linienelement_gmaf",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.54324,
+                        47.272525,
+                        8.579646,
+                        47.302272
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "CompoundCurve",
+                    "name": "v_eo_linienelement_bahn",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "v_eo_linienelement_bahn",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.54324,
+                        47.272525,
+                        8.579646,
+                        47.302272
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "CompoundCurve",
+                    "maxScale": 5000,
+                    "minScale": 0,
+                    "name": "v_eo_linienelement_alle",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "v_eo_linienelement_alle",
+                    "visibility": true
+                  }
+                ],
+                "title": "EINZ"
+              },
+              {
+                "expanded": false,
+                "mutuallyExclusive": false,
+                "name": "BODB",
+                "sublayers": [
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.548416,
+                        47.281185,
+                        8.574549,
+                        47.299678
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "Point",
+                    "maxScale": 1500,
+                    "minScale": 0,
+                    "name": "v_projgebaeudenummerpos",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "v_projgebaeudenummerpos",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.543263,
+                        47.272642,
+                        8.579991,
+                        47.302143
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "Point",
+                    "name": "v_bo_objektnamepos",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "v_bo_objektnamepos",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.542466,
+                        47.272634,
+                        8.579998,
+                        47.300934
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "Point",
+                    "maxScale": 1500,
+                    "minScale": 0,
+                    "name": "v_boflaechesymbol",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "v_boflaechesymbol",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.543696,
+                        47.275948,
+                        8.579688,
+                        47.302321
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "Point",
+                    "maxScale": 1500,
+                    "minScale": 240,
+                    "name": "v_gebaeudenummerpos",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "v_gebaeudenummerpos",
+                    "visibility": false
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.543848,
+                        47.284489,
+                        8.574359,
+                        47.294681
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "Point",
+                    "maxScale": 1500,
+                    "minScale": 0,
+                    "name": "v_gebauedenamepos",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "v_gebauedenamepos",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.543679,
+                        47.275966,
+                        8.579623,
+                        47.302329
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "Point",
+                    "maxScale": 1500,
+                    "minScale": 240,
+                    "name": "v_hausnummerpos",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "v_hausnummerpos",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.543485,
+                        47.275974,
+                        8.579591,
+                        47.302341
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "maptip",
+                    "geometryType": "Point",
+                    "maxScale": 1000,
+                    "minScale": 0,
+                    "name": "gebaeudeeingang",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "gebaeudeeingang",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.541882,
+                        47.272448,
+                        8.580158,
+                        47.302423
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "CurvePolygon",
+                    "name": "boflaeche_solid",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "boflaeche_solid",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.541882,
+                        47.272448,
+                        8.580159,
+                        47.302466
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "CurvePolygon",
+                    "name": "boflaeche",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "boflaeche",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.547611,
+                        47.277729,
+                        8.576806,
+                        47.300821
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "CurvePolygon",
+                    "maxScale": 5000,
+                    "minScale": 0,
+                    "name": "proj_boflaeche",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "proj_boflaeche",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.542899,
+                        47.275904,
+                        8.579821,
+                        47.302358
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "t_flaeche",
+                    "geometryType": "CurvePolygon",
+                    "maxScale": 50000,
+                    "minScale": 0,
+                    "name": "gebaeude",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "gebaeude",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.54253,
+                        47.272518,
+                        8.580152,
+                        47.30246
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "art_txt",
+                    "geometryType": "CurvePolygon",
+                    "maxScale": 5000,
+                    "minScale": 0,
+                    "name": "einzelobjekt",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "einzelobjekt",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.544631,
+                        47.279362,
+                        8.580126,
+                        47.302107
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "CurvePolygon",
+                    "maxScale": 5000,
+                    "minScale": 0,
+                    "name": "v_eo_flaechenelement_gmaf",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "v_eo_flaechenelement_gmaf",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.542033,
+                        47.272621,
+                        8.580152,
+                        47.302465
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "CurvePolygon",
+                    "maxScale": 5000,
+                    "minScale": 0,
+                    "name": "boflaeche_dashed",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "boflaeche_dashed",
+                    "visibility": true
+                  }
+                ],
+                "title": "BODB"
+              },
+              {
+                "expanded": false,
+                "mutuallyExclusive": false,
+                "name": "LOKA",
+                "sublayers": [
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.546192,
+                        47.282558,
+                        8.547513,
+                        47.286874
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "Point",
+                    "maxScale": 2500,
+                    "minScale": 0,
+                    "name": "v_lokalisationsnamepos_s",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "v_lokalisationsnamepos_s",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.543139,
+                        47.274082,
+                        8.578632,
+                        47.30171
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "geometryType": "Point",
+                    "maxScale": 2500,
+                    "minScale": 0,
+                    "name": "v_lokalisationsnamepos_n",
+                    "opacity": 255,
+                    "queryable": false,
+                    "title": "v_lokalisationsnamepos_n",
+                    "visibility": true
+                  }
+                ],
+                "title": "LOKA"
               }
             ],
             "title": "Ortsplan"
+          },
+          {
+            "abstract": "",
+            "attribution": {
+              "OnlineResource": "",
+              "Title": ""
+            },
+            "bbox": {
+              "bounds": [
+                8.541882,
+                47.272448,
+                8.580159,
+                47.302455
+              ],
+              "crs": "EPSG:4326"
+            },
+            "dimensions": [],
+            "geometryType": "CurvePolygon",
+            "name": "gmdeflaeche",
+            "opacity": 255,
+            "queryable": false,
+            "title": "gmdeflaeche",
+            "visibility": true
+          },
+          {
+            "abstract": "",
+            "attribution": {
+              "OnlineResource": "",
+              "Title": ""
+            },
+            "bbox": {
+              "bounds": [
+                -19.917997,
+                32.124486,
+                -19.917996,
+                32.124487
+              ],
+              "crs": "EPSG:4326"
+            },
+            "dimensions": [],
+            "geometryType": "",
+            "name": "bglayer",
+            "opacity": 255,
+            "queryable": false,
+            "title": "bglayer",
+            "visibility": true
           }
         ],
         "thumbnail": "img/genmapthumbs/th_ortsplan.png",
         "title": "Ortsplan",
-        "url": "https://maps.thalwil.ch/ows/th_ortsplan",
+        "url": "https://maps-test.thalwil.ch/ows/th_ortsplan",
         "version": "1.3.0"
       },
       {
@@ -1588,12 +1595,12 @@
           {
             "name": "ortsplan_rtlo_wms",
             "printLayer": "print_ortsplan_rtlo_wms",
-            "visibility": false
+            "visibility": true
           },
           {
             "name": "landeskarte_av",
             "printLayer": "print_landeskarte_av",
-            "visibility": true
+            "visibility": false
           },
           {
             "name": "pixelkarte",
@@ -1628,10 +1635,10 @@
         ],
         "bbox": {
           "bounds": [
-            8.535469,
-            47.26917,
-            8.58902,
-            47.302063
+            8.528985,
+            47.27506,
+            8.602431,
+            47.298708
           ],
           "crs": "EPSG:4326"
         },
@@ -1644,6 +1651,7 @@
         },
         "description": "_",
         "drawingOrder": [
+          "print_landeskarte_av",
           "print_av_ktzh",
           "print_pixelkarte",
           "print_uep_zh",
@@ -1652,6 +1660,11 @@
           "print_orthofoto_2021",
           "print_ortsplan_rtlo_wms",
           "abdeckung_hintergrund",
+          "GrStck_mit_PV-Anlagen",
+          "GrStck_EFH_Gattikon",
+          "GrStck_EFH_Thalwil",
+          "Geb-Eingang_EFH_Thalwil",
+          "Geb-Eingang_EFH_Thalwil",
           "Gebaeudeeingang_status",
           "Hausnummer_tpos",
           "LokalisationsName_tpos",
@@ -1719,7 +1732,7 @@
         "editConfig": null,
         "expanded": true,
         "externalLayers": [],
-        "featureInfoUrl": "https://maps.thalwil.ch/ows/th_av?",
+        "featureInfoUrl": "https://maps-test.thalwil.ch/ows/th_av?",
         "id": "th_av",
         "infoFormats": [
           "text/plain",
@@ -1732,15 +1745,15 @@
         ],
         "initialBbox": {
           "bounds": [
-            8.535469,
-            47.26917,
-            8.58902,
-            47.302063
+            8.528985,
+            47.27506,
+            8.602431,
+            47.298708
           ],
           "crs": "EPSG:4326"
         },
         "keywords": "",
-        "legendUrl": "https://maps.thalwil.ch/ows/th_av?",
+        "legendUrl": "https://maps-test.thalwil.ch/ows/th_av?",
         "mapCrs": "EPSG:2056",
         "minSearchScaleDenom": 500,
         "name": "maps_thalwil_av",
@@ -1798,7 +1811,7 @@
           2500,
           5000
         ],
-        "printUrl": "https://maps.thalwil.ch/ows/th_av?",
+        "printUrl": "https://maps-test.thalwil.ch/ows/th_av?",
         "scales": [
           50000,
           40000,
@@ -1824,12 +1837,12 @@
         ],
         "sublayers": [
           {
-            "expanded": true,
+            "expanded": false,
             "mutuallyExclusive": false,
             "name": "Amtliche_Vermessung",
             "sublayers": [
               {
-                "expanded": true,
+                "expanded": false,
                 "mutuallyExclusive": false,
                 "name": "Thalwil",
                 "sublayers": [
@@ -2473,7 +2486,7 @@
                     "title": "Gebaeudeadressen_U"
                   },
                   {
-                    "expanded": true,
+                    "expanded": false,
                     "mutuallyExclusive": false,
                     "name": "Liegenschaften_U",
                     "sublayers": [
@@ -2563,8 +2576,8 @@
                     "bbox": {
                       "bounds": [
                         8.54257,
-                        47.28081,
-                        8.571689,
+                        47.28083,
+                        8.569683,
                         47.301797
                       ],
                       "crs": "EPSG:4326"
@@ -2621,7 +2634,7 @@
                     "dimensions": [],
                     "displayField": "nummer",
                     "geometryType": "MultiSurface",
-                    "maxScale": 2600,
+                    "maxScale": 5010,
                     "minScale": 0,
                     "name": "Liegenschaft",
                     "opacity": 255,
@@ -3182,8 +3195,8 @@
                     "bbox": {
                       "bounds": [
                         8.54315,
-                        47.281751,
-                        8.571222,
+                        47.281771,
+                        8.569181,
                         47.300968
                       ],
                       "crs": "EPSG:4326"
@@ -3208,8 +3221,8 @@
                     "bbox": {
                       "bounds": [
                         8.54315,
-                        47.281751,
-                        8.571222,
+                        47.281771,
+                        8.569181,
                         47.300968
                       ],
                       "crs": "EPSG:4326"
@@ -3448,6 +3461,144 @@
                     "queryable": false,
                     "title": "Gebaeudeeingang_status",
                     "visibility": false
+                  },
+                  {
+                    "expanded": true,
+                    "mutuallyExclusive": false,
+                    "name": "Auswertung_Avisierung_Energie",
+                    "sublayers": [
+                      {
+                        "abstract": "",
+                        "attribution": {
+                          "OnlineResource": "",
+                          "Title": ""
+                        },
+                        "bbox": {
+                          "bounds": [
+                            8.549419,
+                            47.279308,
+                            8.579494,
+                            47.302094
+                          ],
+                          "crs": "EPSG:4326"
+                        },
+                        "dimensions": [],
+                        "displayField": "maptip",
+                        "geometryType": "Point",
+                        "maxScale": 10010,
+                        "minScale": 200,
+                        "name": "Geb-Eingang_EFH_Thalwil",
+                        "opacity": 255,
+                        "queryable": true,
+                        "title": "Geb-Eingang_EFH_Thalwil",
+                        "visibility": false
+                      },
+                      {
+                        "abstract": "",
+                        "attribution": {
+                          "OnlineResource": "",
+                          "Title": ""
+                        },
+                        "bbox": {
+                          "bounds": [
+                            8.545014,
+                            47.281258,
+                            8.555856,
+                            47.29437
+                          ],
+                          "crs": "EPSG:4326"
+                        },
+                        "dimensions": [],
+                        "displayField": "maptip",
+                        "geometryType": "Point",
+                        "maxScale": 10010,
+                        "minScale": 200,
+                        "name": "Geb-Eingang_EFH_Thalwil",
+                        "opacity": 255,
+                        "queryable": true,
+                        "title": "Geb-Eingang_EFH_Thalwil",
+                        "visibility": false
+                      },
+                      {
+                        "abstract": "",
+                        "attribution": {
+                          "OnlineResource": "",
+                          "Title": ""
+                        },
+                        "bbox": {
+                          "bounds": [
+                            8.547328,
+                            47.278985,
+                            8.579704,
+                            47.302267
+                          ],
+                          "crs": "EPSG:4326"
+                        },
+                        "dimensions": [],
+                        "displayField": "nummer",
+                        "geometryType": "MultiSurface",
+                        "maxScale": 10010,
+                        "minScale": 200,
+                        "name": "GrStck_EFH_Thalwil",
+                        "opacity": 255,
+                        "queryable": true,
+                        "title": "GrStck_EFH_Thalwil",
+                        "visibility": false
+                      },
+                      {
+                        "abstract": "",
+                        "attribution": {
+                          "OnlineResource": "",
+                          "Title": ""
+                        },
+                        "bbox": {
+                          "bounds": [
+                            8.544858,
+                            47.280849,
+                            8.556307,
+                            47.294506
+                          ],
+                          "crs": "EPSG:4326"
+                        },
+                        "dimensions": [],
+                        "displayField": "nummer",
+                        "geometryType": "MultiSurface",
+                        "maxScale": 10010,
+                        "minScale": 200,
+                        "name": "GrStck_EFH_Gattikon",
+                        "opacity": 255,
+                        "queryable": true,
+                        "title": "GrStck_EFH_Gattikon",
+                        "visibility": false
+                      },
+                      {
+                        "abstract": "",
+                        "attribution": {
+                          "OnlineResource": "",
+                          "Title": ""
+                        },
+                        "bbox": {
+                          "bounds": [
+                            8.543293,
+                            47.280288,
+                            8.578702,
+                            47.302221
+                          ],
+                          "crs": "EPSG:4326"
+                        },
+                        "dimensions": [],
+                        "displayField": "nummer",
+                        "geometryType": "MultiSurface",
+                        "maxScale": 10010,
+                        "minScale": 200,
+                        "name": "GrStck_mit_PV-Anlagen",
+                        "opacity": 255,
+                        "queryable": true,
+                        "title": "GrStck_mit_PV-Anlagen",
+                        "visibility": false
+                      }
+                    ],
+                    "title": "Auswertung_Avisierung_Energie"
                   }
                 ],
                 "title": "Thalwil"
@@ -3481,7 +3632,7 @@
         ],
         "thumbnail": "img/genmapthumbs/th_av.png",
         "title": "Amtliche Vermessung",
-        "url": "https://maps.thalwil.ch/ows/th_av",
+        "url": "https://maps-test.thalwil.ch/ows/th_av",
         "version": "1.3.0"
       },
       {
@@ -3505,7 +3656,7 @@
           {
             "name": "ortsplan_rtlo_wms",
             "printLayer": "print_ortsplan_rtlo_wms",
-            "visibility": false
+            "visibility": true
           },
           {
             "name": "landeskarte_av",
@@ -3520,7 +3671,7 @@
           {
             "name": "av_ktzh",
             "printLayer": "print_av_ktzh",
-            "visibility": true
+            "visibility": false
           },
           {
             "name": "orthofoto_2014",
@@ -3545,10 +3696,10 @@
         ],
         "bbox": {
           "bounds": [
-            8.535469,
-            47.26917,
-            8.58902,
-            47.302063
+            8.528985,
+            47.27506,
+            8.602431,
+            47.298708
           ],
           "crs": "EPSG:4326"
         },
@@ -3568,7 +3719,7 @@
           "print_orthofoto_2014",
           "print_orthofoto_2018",
           "print_orthofoto_2021",
-          "print_thalwil_rtlo_wms",
+          "print_ortsplan_rtlo_wms",
           "bearbeiten_txt",
           "gaszone_hoch",
           "gaszone_tief",
@@ -3594,7 +3745,7 @@
         "editConfig": null,
         "expanded": true,
         "externalLayers": [],
-        "featureInfoUrl": "https://maps.thalwil.ch/ows/th_gas?",
+        "featureInfoUrl": "https://maps-test.thalwil.ch/ows/th_gas?",
         "id": "th_gas",
         "infoFormats": [
           "text/plain",
@@ -3607,15 +3758,15 @@
         ],
         "initialBbox": {
           "bounds": [
-            8.535469,
-            47.26917,
-            8.58902,
-            47.302063
+            8.528985,
+            47.27506,
+            8.602431,
+            47.298708
           ],
           "crs": "EPSG:4326"
         },
         "keywords": "",
-        "legendUrl": "https://maps.thalwil.ch/ows/th_gas?",
+        "legendUrl": "https://maps-test.thalwil.ch/ows/th_gas?",
         "mapCrs": "EPSG:2056",
         "minSearchScaleDenom": 500,
         "name": "maps_thalwil_gas",
@@ -3674,7 +3825,7 @@
           1000,
           2500
         ],
-        "printUrl": "https://maps.thalwil.ch/ows/th_gas?",
+        "printUrl": "https://maps-test.thalwil.ch/ows/th_gas?",
         "scales": [
           50000,
           40000,
@@ -3698,7 +3849,7 @@
         ],
         "sublayers": [
           {
-            "expanded": true,
+            "expanded": false,
             "mutuallyExclusive": false,
             "name": "gas",
             "sublayers": [
@@ -4238,42 +4389,11 @@
               }
             ],
             "title": "gas"
-          },
-          {
-            "expanded": false,
-            "mutuallyExclusive": false,
-            "name": "bglayer",
-            "sublayers": [
-              {
-                "abstract": "",
-                "attribution": {
-                  "OnlineResource": "",
-                  "Title": ""
-                },
-                "bbox": {
-                  "bounds": [
-                    8.492283,
-                    47.254096,
-                    8.605599,
-                    47.319978
-                  ],
-                  "crs": "EPSG:4326"
-                },
-                "dimensions": [],
-                "geometryType": "",
-                "name": "print_thalwil_rtlo_wms",
-                "opacity": 255,
-                "queryable": false,
-                "title": "print_thalwil_rtlo_wms",
-                "visibility": false
-              }
-            ],
-            "title": "bglayer"
           }
         ],
         "thumbnail": "img/genmapthumbs/th_gas.png",
         "title": "Gas",
-        "url": "https://maps.thalwil.ch/ows/th_gas",
+        "url": "https://maps-test.thalwil.ch/ows/th_gas",
         "version": "1.3.0"
       },
       {
@@ -4297,7 +4417,7 @@
           {
             "name": "ortsplan_rtlo_wms",
             "printLayer": "print_ortsplan_rtlo_wms",
-            "visibility": false
+            "visibility": true
           },
           {
             "name": "landeskarte_av",
@@ -4312,7 +4432,7 @@
           {
             "name": "av_ktzh",
             "printLayer": "print_av_ktzh",
-            "visibility": true
+            "visibility": false
           },
           {
             "name": "orthofoto_2014",
@@ -4412,7 +4532,7 @@
         "editConfig": null,
         "expanded": true,
         "externalLayers": [],
-        "featureInfoUrl": "https://maps.thalwil.ch/ows/th_was?",
+        "featureInfoUrl": "https://maps-test.thalwil.ch/ows/th_was?",
         "id": "th_was",
         "infoFormats": [
           "text/plain",
@@ -4433,7 +4553,7 @@
           "crs": "EPSG:4326"
         },
         "keywords": "",
-        "legendUrl": "https://maps.thalwil.ch/ows/th_was?",
+        "legendUrl": "https://maps-test.thalwil.ch/ows/th_was?",
         "mapCrs": "EPSG:2056",
         "minSearchScaleDenom": 500,
         "name": "maps_thalwil_was",
@@ -4492,7 +4612,7 @@
           1000,
           2500
         ],
-        "printUrl": "https://maps.thalwil.ch/ows/th_was?",
+        "printUrl": "https://maps-test.thalwil.ch/ows/th_was?",
         "scales": [
           50000,
           40000,
@@ -4521,12 +4641,12 @@
             "name": "Wasserversorgung",
             "sublayers": [
               {
-                "expanded": false,
+                "expanded": true,
                 "mutuallyExclusive": false,
                 "name": "Wasser_Thalwil",
                 "sublayers": [
                   {
-                    "expanded": false,
+                    "expanded": true,
                     "mutuallyExclusive": false,
                     "name": "BESCHRIFTUNGEN",
                     "sublayers": [
@@ -4740,10 +4860,10 @@
                     },
                     "bbox": {
                       "bounds": [
-                        8.554764,
-                        47.286873,
-                        8.569315,
-                        47.29496
+                        8.528985,
+                        47.27506,
+                        8.602431,
+                        47.298708
                       ],
                       "crs": "EPSG:4326"
                     },
@@ -5724,7 +5844,7 @@
         ],
         "thumbnail": "img/genmapthumbs/th_was.png",
         "title": "Wasser",
-        "url": "https://maps.thalwil.ch/ows/th_was",
+        "url": "https://maps-test.thalwil.ch/ows/th_was",
         "version": "1.3.0"
       },
       {
@@ -5748,7 +5868,7 @@
           {
             "name": "ortsplan_rtlo_wms",
             "printLayer": "print_ortsplan_rtlo_wms",
-            "visibility": false
+            "visibility": true
           },
           {
             "name": "landeskarte_av",
@@ -5763,7 +5883,7 @@
           {
             "name": "av_ktzh",
             "printLayer": "print_av_ktzh",
-            "visibility": true
+            "visibility": false
           },
           {
             "name": "orthofoto_2014",
@@ -5811,7 +5931,7 @@
           "print_orthofoto_2014",
           "print_orthofoto_2018",
           "print_orthofoto_2021",
-          "print_ortsplan_rtlo_wms",
+          "print_thalwil_rtlo_wms",
           "kanal_sa_eig",
           "kanal_pa_eig",
           "abwasserbauwerk_text_sa",
@@ -5836,7 +5956,7 @@
         "editConfig": null,
         "expanded": true,
         "externalLayers": [],
-        "featureInfoUrl": "https://maps.thalwil.ch/ows/th_sew?",
+        "featureInfoUrl": "https://maps-test.thalwil.ch/ows/th_sew?",
         "id": "th_sew",
         "infoFormats": [
           "text/plain",
@@ -5857,7 +5977,7 @@
           "crs": "EPSG:4326"
         },
         "keywords": "",
-        "legendUrl": "https://maps.thalwil.ch/ows/th_sew?",
+        "legendUrl": "https://maps-test.thalwil.ch/ows/th_sew?",
         "mapCrs": "EPSG:2056",
         "minSearchScaleDenom": 500,
         "name": "maps_thalwil_sew",
@@ -5916,7 +6036,7 @@
           1000,
           2500
         ],
-        "printUrl": "https://maps.thalwil.ch/ows/th_sew?",
+        "printUrl": "https://maps-test.thalwil.ch/ows/th_sew?",
         "scales": [
           50000,
           40000,
@@ -5940,17 +6060,17 @@
         ],
         "sublayers": [
           {
-            "expanded": false,
+            "expanded": true,
             "mutuallyExclusive": false,
             "name": "Siedlungsentwaesserung",
             "sublayers": [
               {
-                "expanded": false,
+                "expanded": true,
                 "mutuallyExclusive": false,
                 "name": "Abwasser_Thalwil",
                 "sublayers": [
                   {
-                    "expanded": false,
+                    "expanded": true,
                     "mutuallyExclusive": false,
                     "name": "beschriftungen",
                     "sublayers": [
@@ -6473,11 +6593,42 @@
               }
             ],
             "title": "Siedlungsentwaesserung"
+          },
+          {
+            "expanded": true,
+            "mutuallyExclusive": false,
+            "name": "bglayer",
+            "sublayers": [
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.492283,
+                    47.254096,
+                    8.605599,
+                    47.319978
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "geometryType": "",
+                "name": "print_thalwil_rtlo_wms",
+                "opacity": 255,
+                "queryable": false,
+                "title": "print_thalwil_rtlo_wms",
+                "visibility": false
+              }
+            ],
+            "title": "bglayer"
           }
         ],
         "thumbnail": "img/genmapthumbs/th_sew.png",
         "title": "Abwasser",
-        "url": "https://maps.thalwil.ch/ows/th_sew",
+        "url": "https://maps-test.thalwil.ch/ows/th_sew",
         "version": "1.3.0"
       },
       {
@@ -6501,7 +6652,7 @@
           {
             "name": "ortsplan_rtlo_wms",
             "printLayer": "print_ortsplan_rtlo_wms",
-            "visibility": false
+            "visibility": true
           },
           {
             "name": "landeskarte_av",
@@ -6516,7 +6667,7 @@
           {
             "name": "av_ktzh",
             "printLayer": "print_av_ktzh",
-            "visibility": true
+            "visibility": false
           },
           {
             "name": "orthofoto_2014",
@@ -6541,10 +6692,10 @@
         ],
         "bbox": {
           "bounds": [
-            8.535469,
-            47.26917,
-            8.58902,
-            47.302063
+            8.528985,
+            47.27506,
+            8.602431,
+            47.298708
           ],
           "crs": "EPSG:4326"
         },
@@ -6635,7 +6786,7 @@
         "editConfig": null,
         "expanded": true,
         "externalLayers": [],
-        "featureInfoUrl": "https://maps.thalwil.ch/ows/th_werke?",
+        "featureInfoUrl": "https://maps-test.thalwil.ch/ows/th_werke?",
         "id": "th_werke",
         "infoFormats": [
           "text/plain",
@@ -6648,15 +6799,15 @@
         ],
         "initialBbox": {
           "bounds": [
-            8.535469,
-            47.26917,
-            8.58902,
-            47.302063
+            8.528985,
+            47.27506,
+            8.602431,
+            47.298708
           ],
           "crs": "EPSG:4326"
         },
         "keywords": "",
-        "legendUrl": "https://maps.thalwil.ch/ows/th_werke?",
+        "legendUrl": "https://maps-test.thalwil.ch/ows/th_werke?",
         "mapCrs": "EPSG:2056",
         "minSearchScaleDenom": 500,
         "name": "maps_thalwil_werke",
@@ -6715,7 +6866,7 @@
           1000,
           2500
         ],
-        "printUrl": "https://maps.thalwil.ch/ows/th_werke?",
+        "printUrl": "https://maps-test.thalwil.ch/ows/th_werke?",
         "scales": [
           50000,
           40000,
@@ -6744,7 +6895,7 @@
             "name": "Leitungskataster_Thalwil",
             "sublayers": [
               {
-                "expanded": false,
+                "expanded": true,
                 "mutuallyExclusive": false,
                 "name": "Beschriftungen",
                 "sublayers": [
@@ -6940,7 +7091,7 @@
                     "title": "beschriftungen_sew"
                   },
                   {
-                    "expanded": true,
+                    "expanded": false,
                     "mutuallyExclusive": false,
                     "name": "beschriftungen_was",
                     "sublayers": [
@@ -7064,7 +7215,7 @@
                     "bbox": {
                       "bounds": [
                         8.52717,
-                        47.267179,
+                        47.267173,
                         8.587448,
                         47.314771
                       ],
@@ -7504,10 +7655,10 @@
                     },
                     "bbox": {
                       "bounds": [
-                        8.554764,
-                        47.286873,
-                        8.569315,
-                        47.29496
+                        8.528985,
+                        47.27506,
+                        8.602431,
+                        47.298708
                       ],
                       "crs": "EPSG:4326"
                     },
@@ -7726,10 +7877,10 @@
                     },
                     "bbox": {
                       "bounds": [
-                        8.535469,
-                        47.26917,
-                        8.58902,
-                        47.302063
+                        8.528985,
+                        47.27506,
+                        8.602431,
+                        47.298708
                       ],
                       "crs": "EPSG:4326"
                     },
@@ -7779,10 +7930,10 @@
                         },
                         "bbox": {
                           "bounds": [
-                            8.535469,
-                            47.26917,
-                            8.58902,
-                            47.302063
+                            8.528985,
+                            47.27506,
+                            8.602431,
+                            47.298708
                           ],
                           "crs": "EPSG:4326"
                         },
@@ -7913,10 +8064,10 @@
                         },
                         "bbox": {
                           "bounds": [
-                            8.535469,
-                            47.26917,
-                            8.58902,
-                            47.302063
+                            8.528985,
+                            47.27506,
+                            8.602431,
+                            47.298708
                           ],
                           "crs": "EPSG:4326"
                         },
@@ -8469,7 +8620,7 @@
                 "title": "FW-Gattikon"
               },
               {
-                "expanded": false,
+                "expanded": true,
                 "mutuallyExclusive": false,
                 "name": "Diverses",
                 "sublayers": [
@@ -8505,7 +8656,7 @@
         ],
         "thumbnail": "img/genmapthumbs/th_werke.png",
         "title": "Leitungskataster",
-        "url": "https://maps.thalwil.ch/ows/th_werke",
+        "url": "https://maps-test.thalwil.ch/ows/th_werke",
         "version": "1.3.0"
       },
       {
@@ -8583,7 +8734,7 @@
           "phone": "044 723 23 06",
           "position": ""
         },
-        "description": "_",
+        "description": "Grundlagen",
         "drawingOrder": [
           "print_landeskarte_av",
           "print_av_ktzh",
@@ -8592,22 +8743,21 @@
           "print_orthofoto_2014",
           "print_orthofoto_2018",
           "print_orthofoto_2021",
-          "print_ortsplan_rtlo_wms",
-          "inventar_mauersegler",
-          "inventar_fledermausquartier",
-          "objekte",
-          "INLS_flaeche_vergangene",
-          "INLS_linie_vergangene",
-          "INLS_punkt_vergangene",
-          "INSL_flaeche",
-          "INLS_linie",
-          "INLS_punkt"
+          "print_thalwil_rtlo_wms",
+          "Baulinien",
+          "GrabenAufbruch_Objekt",
+          "GrabenAufbruch_erwartet",
+          "GrabenAufbruch_offen",
+          "bauten_mit_schutzstaus",
+          "baugesuch_f",
+          "baugesuch_l",
+          "baugesuch_p"
         ],
         "editConfig": null,
         "expanded": true,
         "externalLayers": [],
-        "featureInfoUrl": "https://maps.thalwil.ch/ows/th_schutzinv?",
-        "id": "th_schutzinv",
+        "featureInfoUrl": "https://maps-test.thalwil.ch/ows/th_baugesuch_bau?",
+        "id": "th_baugesuch_bau",
         "infoFormats": [
           "text/plain",
           "text/html",
@@ -8627,10 +8777,1305 @@
           "crs": "EPSG:4326"
         },
         "keywords": "",
-        "legendUrl": "https://maps.thalwil.ch/ows/th_schutzinv?",
+        "legendUrl": "https://maps-test.thalwil.ch/ows/th_baugesuch_bau?",
         "mapCrs": "EPSG:2056",
         "minSearchScaleDenom": 500,
-        "name": "maps_thalwil_schutzinv",
+        "name": "BauGesuchsGrundlagen",
+        "onlineResource": "www.tahlwil.ch",
+        "print": [
+          {
+            "labels": [
+              "Titel"
+            ],
+            "map": {
+              "height": 249.49899932514046,
+              "name": "map0",
+              "width": 200.0
+            },
+            "name": "A4 Hochformat"
+          },
+          {
+            "labels": [
+              "Titel"
+            ],
+            "map": {
+              "height": 168.28700000036443,
+              "name": "map0",
+              "width": 287.0
+            },
+            "name": "A4 Querformat"
+          },
+          {
+            "labels": [
+              "Titel"
+            ],
+            "map": {
+              "height": 370.59999999585807,
+              "name": "map0",
+              "width": 287.0
+            },
+            "name": "A3 Hochformat"
+          },
+          {
+            "labels": [
+              "Titel"
+            ],
+            "map": {
+              "height": 251.7230000019165,
+              "name": "map0",
+              "width": 410.0
+            },
+            "name": "A3 Querformat"
+          }
+        ],
+        "printScales": [
+          500,
+          250,
+          1000,
+          2500,
+          5000
+        ],
+        "printUrl": "https://maps-test.thalwil.ch/ows/th_baugesuch_bau?",
+        "scales": [
+          50000,
+          40000,
+          20000,
+          10000,
+          5000,
+          2000,
+          1500,
+          1000,
+          750,
+          500,
+          250,
+          100,
+          50,
+          25,
+          10
+        ],
+        "searchProviders": [
+          "coordinates",
+          "geoadmin"
+        ],
+        "sublayers": [
+          {
+            "expanded": true,
+            "mutuallyExclusive": false,
+            "name": "BauGrundlagen",
+            "sublayers": [
+              {
+                "expanded": true,
+                "mutuallyExclusive": false,
+                "name": "Baugesuche",
+                "sublayers": [
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.545253,
+                        47.279414,
+                        8.578552,
+                        47.301544
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "bg_nummer",
+                    "geometryType": "PointZ",
+                    "maxScale": 4500,
+                    "minScale": 100,
+                    "name": "baugesuch_p",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "baugesuch_p",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.549895,
+                        47.28193,
+                        8.572255,
+                        47.300871
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "bg_nummer",
+                    "geometryType": "LineStringZ",
+                    "maxScale": 4500,
+                    "minScale": 100,
+                    "name": "baugesuch_l",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "baugesuch_l",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.546168,
+                        47.277739,
+                        8.57918,
+                        47.301003
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "bg_nummer",
+                    "geometryType": "PolygonZ",
+                    "maxScale": 4500,
+                    "minScale": 100,
+                    "name": "baugesuch_f",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "baugesuch_f",
+                    "visibility": true
+                  }
+                ],
+                "title": "Baugesuche"
+              },
+              {
+                "expanded": false,
+                "mutuallyExclusive": false,
+                "name": "Bauten_mit_Schutzstatus",
+                "sublayers": [
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.544956,
+                        47.279209,
+                        8.579639,
+                        47.302152
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "invnummer",
+                    "geometryType": "PolygonZ",
+                    "maxScale": 7000,
+                    "minScale": 200,
+                    "name": "bauten_mit_schutzstaus",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "bauten_mit_schutzstaus",
+                    "visibility": false
+                  }
+                ],
+                "title": "Bauten_mit_Schutzstatus"
+              },
+              {
+                "expanded": true,
+                "mutuallyExclusive": false,
+                "name": "GrabenAufbruch",
+                "sublayers": [
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.559027,
+                        47.286026,
+                        8.570803,
+                        47.301609
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "t_ili_tid",
+                    "geometryType": "CurvePolygon",
+                    "maxScale": 2501,
+                    "minScale": 200,
+                    "name": "GrabenAufbruch_offen",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "GrabenAufbruch_offen",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.546103,
+                        47.285205,
+                        8.568081,
+                        47.299626
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "t_ili_tid",
+                    "geometryType": "CurvePolygon",
+                    "maxScale": 2501,
+                    "minScale": 200,
+                    "name": "GrabenAufbruch_erwartet",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "GrabenAufbruch_erwartet",
+                    "visibility": true
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.549317,
+                        47.277852,
+                        8.575683,
+                        47.299761
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "maptip",
+                    "geometryType": "Point",
+                    "maxScale": 2501,
+                    "minScale": 200,
+                    "name": "GrabenAufbruch_Objekt",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "GrabenAufbruch_Objekt",
+                    "visibility": true
+                  }
+                ],
+                "title": "GrabenAufbruch"
+              },
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.157224,
+                    47.141693,
+                    9.041589,
+                    47.848223
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "geometryType": "",
+                "maxScale": 4500,
+                "minScale": 200,
+                "name": "Baulinien",
+                "opacity": 255,
+                "queryable": true,
+                "title": "Baulinien",
+                "visibility": true
+              }
+            ],
+            "title": "BauGrundlagen"
+          },
+          {
+            "expanded": false,
+            "mutuallyExclusive": false,
+            "name": "bglayer",
+            "sublayers": [
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.492283,
+                    47.254096,
+                    8.605599,
+                    47.319978
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "geometryType": "",
+                "name": "print_thalwil_rtlo_wms",
+                "opacity": 255,
+                "queryable": true,
+                "title": "print_thalwil_rtlo_wms",
+                "visibility": false
+              }
+            ],
+            "title": "bglayer"
+          }
+        ],
+        "thumbnail": "img/genmapthumbs/th_baugesuch_bau.png",
+        "title": "Baugesuchs",
+        "url": "https://maps-test.thalwil.ch/ows/th_baugesuch_bau",
+        "version": "1.3.0"
+      },
+      {
+        "abstract": "",
+        "additionalMouseCrs": [
+          "EPSG:21781"
+        ],
+        "attribution": {
+          "OnlineResource": "https://www.thalwil.ch",
+          "Title": "Thalwil"
+        },
+        "availableFormats": [
+          "image/jpeg",
+          "image/png",
+          "image/png; mode=16bit",
+          "image/png; mode=8bit",
+          "image/png; mode=1bit",
+          "application/dxf"
+        ],
+        "backgroundLayers": [
+          {
+            "name": "ortsplan_rtlo_wms",
+            "printLayer": "print_ortsplan_rtlo_wms",
+            "visibility": true
+          },
+          {
+            "name": "landeskarte_av",
+            "printLayer": "print_landeskarte_av",
+            "visibility": false
+          },
+          {
+            "name": "pixelkarte",
+            "printLayer": "print_pixelkarte",
+            "visibility": false
+          },
+          {
+            "name": "av_ktzh",
+            "printLayer": "print_av_ktzh",
+            "visibility": false
+          },
+          {
+            "name": "orthofoto_2014",
+            "printLayer": "print_orthofoto_2014",
+            "visibility": false
+          },
+          {
+            "name": "orthofoto_2018",
+            "printLayer": "print_orthofoto_2018",
+            "visibility": false
+          },
+          {
+            "name": "orthofoto_2021",
+            "printLayer": "print_orthofoto_2021",
+            "visibility": false
+          },
+          {
+            "name": "uep_zh",
+            "printLayer": "print_uep_zh",
+            "visibility": false
+          }
+        ],
+        "bbox": {
+          "bounds": [
+            8.52229,
+            47.265038,
+            8.597112,
+            47.310661
+          ],
+          "crs": "EPSG:4326"
+        },
+        "contact": {
+          "email": "geomatik@thalwil.ch",
+          "organization": "Gemeinde Thalwil, DLZ PBW",
+          "person": "Geomatik",
+          "phone": "044 723 23 06",
+          "position": ""
+        },
+        "description": "Achsen",
+        "drawingOrder": [
+          "print_landeskarte_av",
+          "print_av_ktzh",
+          "print_pixelkarte",
+          "print_uep_zh",
+          "print_orthofoto_2014",
+          "print_orthofoto_2018",
+          "print_orthofoto_2021",
+          "print_thalwil_rtlo_wms",
+          "AV_boflaeche",
+          "Strassen-Achsen_ohne_Filter",
+          "Strassen-Achsen",
+          "abschnitte_ohne_namen",
+          "strassenname_enthaelt_weg",
+          "flurwegnetz",
+          "fusswegnetz",
+          "strassenbelag",
+          "eigentum"
+        ],
+        "editConfig": null,
+        "expanded": true,
+        "externalLayers": [],
+        "featureInfoUrl": "https://maps-test.thalwil.ch/ows/th_strassen_weg_achsen?",
+        "id": "th_strassen_weg_achsen",
+        "infoFormats": [
+          "text/plain",
+          "text/html",
+          "text/xml",
+          "application/vnd.ogc.gml",
+          "application/vnd.ogc.gml/3.1.1",
+          "application/json",
+          "application/geo+json"
+        ],
+        "initialBbox": {
+          "bounds": [
+            8.52229,
+            47.265038,
+            8.597112,
+            47.310661
+          ],
+          "crs": "EPSG:4326"
+        },
+        "keywords": "",
+        "legendUrl": "https://maps-test.thalwil.ch/ows/th_strassen_weg_achsen?",
+        "mapCrs": "EPSG:2056",
+        "minSearchScaleDenom": 500,
+        "name": "maps_thalwil_StrassenWege",
+        "onlineResource": "maps.thalwil.ch",
+        "print": [
+          {
+            "labels": [
+              "Titel"
+            ],
+            "map": {
+              "height": 370.59999999585807,
+              "name": "map0",
+              "width": 287.0
+            },
+            "name": "1 A3 Hochformat"
+          },
+          {
+            "labels": [
+              "Titel"
+            ],
+            "map": {
+              "height": 251.7230000019165,
+              "name": "map0",
+              "width": 410.0
+            },
+            "name": "2 A3 Querformat"
+          },
+          {
+            "labels": [
+              "Titel"
+            ],
+            "map": {
+              "height": 249.49899932514046,
+              "name": "map0",
+              "width": 200.0
+            },
+            "name": "3 A4 Hochformat"
+          },
+          {
+            "labels": [
+              "Titel"
+            ],
+            "map": {
+              "height": 168.28700000036443,
+              "name": "map0",
+              "width": 287.0
+            },
+            "name": "4 A4 Querformat"
+          }
+        ],
+        "printScales": [
+          500,
+          250,
+          1000,
+          2500,
+          5000
+        ],
+        "printUrl": "https://maps-test.thalwil.ch/ows/th_strassen_weg_achsen?",
+        "scales": [
+          50000,
+          40000,
+          20000,
+          10000,
+          5000,
+          2000,
+          1500,
+          1000,
+          750,
+          500,
+          250,
+          100,
+          50,
+          25,
+          10
+        ],
+        "searchProviders": [
+          "coordinates",
+          "geoadmin"
+        ],
+        "sublayers": [
+          {
+            "expanded": true,
+            "mutuallyExclusive": false,
+            "name": "Achsen_der_Strassen_Wege",
+            "sublayers": [
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.542081,
+                    47.272691,
+                    8.57985,
+                    47.303005
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "displayField": "gemeindename",
+                "geometryType": "MultiLineString",
+                "name": "eigentum",
+                "opacity": 255,
+                "queryable": true,
+                "title": "eigentum",
+                "visibility": false
+              },
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.542081,
+                    47.272691,
+                    8.57985,
+                    47.303005
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "displayField": "gemeindename",
+                "geometryType": "MultiLineString",
+                "name": "strassenbelag",
+                "opacity": 255,
+                "queryable": true,
+                "title": "strassenbelag",
+                "visibility": false
+              },
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.542081,
+                    47.272701,
+                    8.578876,
+                    47.303005
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "displayField": "gemeindename",
+                "geometryType": "MultiLineString",
+                "name": "fusswegnetz",
+                "opacity": 255,
+                "queryable": true,
+                "title": "fusswegnetz",
+                "visibility": false
+              },
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.543625,
+                    47.277706,
+                    8.575686,
+                    47.301337
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "displayField": "gemeindename",
+                "geometryType": "MultiLineString",
+                "name": "flurwegnetz",
+                "opacity": 255,
+                "queryable": true,
+                "title": "flurwegnetz",
+                "visibility": false
+              },
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.542081,
+                    47.272701,
+                    8.578855,
+                    47.302061
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "displayField": "gemeindename",
+                "geometryType": "MultiLineString",
+                "name": "strassenname_enthaelt_weg",
+                "opacity": 255,
+                "queryable": true,
+                "title": "strassenname_enthaelt_weg",
+                "visibility": false
+              },
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.546037,
+                    47.275034,
+                    8.57657,
+                    47.302968
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "displayField": "gemeindename",
+                "geometryType": "MultiLineString",
+                "name": "abschnitte_ohne_namen",
+                "opacity": 255,
+                "queryable": true,
+                "title": "abschnitte_ohne_namen",
+                "visibility": false
+              },
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.542081,
+                    47.272691,
+                    8.579837,
+                    47.30239
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "displayField": "gemeindename",
+                "geometryType": "MultiLineString",
+                "name": "Strassen-Achsen",
+                "opacity": 255,
+                "queryable": true,
+                "title": "Strassen-Achsen",
+                "visibility": true
+              },
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.542081,
+                    47.272691,
+                    8.57985,
+                    47.303005
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "geometryType": "MultiLineString",
+                "name": "Strassen-Achsen_ohne_Filter",
+                "opacity": 255,
+                "queryable": false,
+                "title": "Strassen-Achsen_ohne_Filter",
+                "visibility": false
+              },
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.541882,
+                    47.27235,
+                    8.590095,
+                    47.306614
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "displayField": "gid",
+                "geometryType": "PolygonZ",
+                "name": "AV_boflaeche",
+                "opacity": 255,
+                "queryable": true,
+                "title": "AV_boflaeche",
+                "visibility": false
+              }
+            ],
+            "title": "Achsen_der_Strassen_Wege"
+          },
+          {
+            "expanded": false,
+            "mutuallyExclusive": false,
+            "name": "bglayer",
+            "sublayers": [
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.492283,
+                    47.254096,
+                    8.605599,
+                    47.319978
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "geometryType": "",
+                "name": "print_thalwil_rtlo_wms",
+                "opacity": 255,
+                "queryable": false,
+                "title": "print_thalwil_rtlo_wms",
+                "visibility": false
+              }
+            ],
+            "title": "bglayer"
+          }
+        ],
+        "thumbnail": "img/genmapthumbs/th_strassen_weg_achsen.png",
+        "title": "Strassen-",
+        "url": "https://maps-test.thalwil.ch/ows/th_strassen_weg_achsen",
+        "version": "1.3.0"
+      },
+      {
+        "abstract": "",
+        "additionalMouseCrs": [
+          "EPSG:21781"
+        ],
+        "attribution": {
+          "OnlineResource": "https://www.thalwil.ch",
+          "Title": "Thalwil"
+        },
+        "availableFormats": [
+          "image/jpeg",
+          "image/png",
+          "image/png; mode=16bit",
+          "image/png; mode=8bit",
+          "image/png; mode=1bit",
+          "application/dxf"
+        ],
+        "backgroundLayers": [
+          {
+            "name": "ortsplan_rtlo_wms",
+            "printLayer": "print_ortsplan_rtlo_wms",
+            "visibility": true
+          },
+          {
+            "name": "landeskarte_av",
+            "printLayer": "print_landeskarte_av",
+            "visibility": false
+          },
+          {
+            "name": "pixelkarte",
+            "printLayer": "print_pixelkarte",
+            "visibility": false
+          },
+          {
+            "name": "av_ktzh",
+            "printLayer": "print_av_ktzh",
+            "visibility": false
+          },
+          {
+            "name": "orthofoto_2014",
+            "printLayer": "print_orthofoto_2014",
+            "visibility": false
+          },
+          {
+            "name": "orthofoto_2018",
+            "printLayer": "print_orthofoto_2018",
+            "visibility": false
+          },
+          {
+            "name": "orthofoto_2021",
+            "printLayer": "print_orthofoto_2021",
+            "visibility": false
+          },
+          {
+            "name": "uep_zh",
+            "printLayer": "print_uep_zh",
+            "visibility": false
+          }
+        ],
+        "bbox": {
+          "bounds": [
+            8.528985,
+            47.27506,
+            8.602431,
+            47.298708
+          ],
+          "crs": "EPSG:4326"
+        },
+        "contact": {
+          "email": "vermessung@thalwil.ch",
+          "organization": "Gemeinde Thalwil, DLZ BEU",
+          "person": "Geomatik",
+          "phone": "",
+          "position": ""
+        },
+        "description": "Energieplan 2023",
+        "drawingOrder": [
+          "print_landeskarte_av",
+          "print_av_ktzh",
+          "print_pixelkarte",
+          "print_uep_zh",
+          "print_orthofoto_2014",
+          "print_orthofoto_2018",
+          "print_orthofoto_2021",
+          "print_ortsplan_rtlo_wms",
+          "Geb\u00e4udeeingang_energie Kopie Kopie",
+          "tha_energiepara",
+          "energiezonen",
+          "geplante energieleitung",
+          "aktueller_Energietr\u00e4ger"
+        ],
+        "editConfig": null,
+        "expanded": true,
+        "externalLayers": [],
+        "featureInfoUrl": "https://maps-test.thalwil.ch/ows/th_energieplan?",
+        "id": "th_energieplan",
+        "infoFormats": [
+          "text/plain",
+          "text/html",
+          "text/xml",
+          "application/vnd.ogc.gml",
+          "application/vnd.ogc.gml/3.1.1",
+          "application/json",
+          "application/geo+json"
+        ],
+        "initialBbox": {
+          "bounds": [
+            8.528985,
+            47.27506,
+            8.602431,
+            47.298708
+          ],
+          "crs": "EPSG:4326"
+        },
+        "keywords": "",
+        "legendUrl": "https://maps-test.thalwil.ch/ows/th_energieplan?",
+        "mapCrs": "EPSG:2056",
+        "minSearchScaleDenom": 500,
+        "name": "maps_thalwil_kunstbauten",
+        "onlineResource": "maps.thalwil.ch",
+        "print": [
+          {
+            "labels": [
+              "Titel"
+            ],
+            "map": {
+              "height": 249.49899932514046,
+              "name": "map0",
+              "width": 200.0
+            },
+            "name": "3 A4 Hochformat"
+          },
+          {
+            "labels": [
+              "Titel"
+            ],
+            "map": {
+              "height": 168.28700000036443,
+              "name": "map0",
+              "width": 287.0
+            },
+            "name": "4 A4 Querformat"
+          },
+          {
+            "labels": [
+              "Titel"
+            ],
+            "map": {
+              "height": 370.59999999585807,
+              "name": "map0",
+              "width": 287.0
+            },
+            "name": "1 A3 Hochformat"
+          },
+          {
+            "labels": [
+              "Titel"
+            ],
+            "map": {
+              "height": 251.7230000019165,
+              "name": "map0",
+              "width": 410.0
+            },
+            "name": "2 A3 Querformat"
+          }
+        ],
+        "printScales": [
+          500,
+          250,
+          1000,
+          2500,
+          5000
+        ],
+        "printUrl": "https://maps-test.thalwil.ch/ows/th_energieplan?",
+        "scales": [
+          50000,
+          40000,
+          20000,
+          10000,
+          5000,
+          2000,
+          1500,
+          1000,
+          750,
+          500,
+          250,
+          100,
+          50,
+          25,
+          10
+        ],
+        "searchProviders": [
+          "coordinates",
+          "geoadmin"
+        ],
+        "sublayers": [
+          {
+            "expanded": true,
+            "mutuallyExclusive": false,
+            "name": "Energieplan",
+            "sublayers": [
+              {
+                "expanded": false,
+                "mutuallyExclusive": false,
+                "name": "Energiezonen",
+                "sublayers": [
+                  {
+                    "expanded": false,
+                    "mutuallyExclusive": false,
+                    "name": "Erweiterung FW ARA",
+                    "sublayers": [
+                      {
+                        "abstract": "",
+                        "attribution": {
+                          "OnlineResource": "",
+                          "Title": ""
+                        },
+                        "bbox": {
+                          "bounds": [
+                            8.543485,
+                            47.275974,
+                            8.579591,
+                            47.302341
+                          ],
+                          "crs": "EPSG:4326"
+                        },
+                        "dimensions": [],
+                        "geometryType": "Point",
+                        "maxScale": 5000,
+                        "minScale": 0,
+                        "name": "aktueller_Energietr\u00e4ger",
+                        "opacity": 255,
+                        "queryable": false,
+                        "title": "aktueller_Energietr\u00e4ger",
+                        "visibility": true
+                      },
+                      {
+                        "abstract": "",
+                        "attribution": {
+                          "OnlineResource": "",
+                          "Title": ""
+                        },
+                        "bbox": {
+                          "bounds": [
+                            8.561436,
+                            47.283594,
+                            8.573138,
+                            47.291269
+                          ],
+                          "crs": "EPSG:4326"
+                        },
+                        "dimensions": [],
+                        "geometryType": "LineStringZ",
+                        "name": "geplante energieleitung",
+                        "opacity": 255,
+                        "queryable": false,
+                        "title": "geplante energieleitung",
+                        "visibility": true
+                      }
+                    ],
+                    "title": "Erweiterung FW ARA"
+                  },
+                  {
+                    "abstract": "",
+                    "attribution": {
+                      "OnlineResource": "",
+                      "Title": ""
+                    },
+                    "bbox": {
+                      "bounds": [
+                        8.542837,
+                        47.28013,
+                        8.580159,
+                        47.302447
+                      ],
+                      "crs": "EPSG:4326"
+                    },
+                    "dimensions": [],
+                    "displayField": "nummer",
+                    "geometryType": "MultiPolygon",
+                    "name": "energiezonen",
+                    "opacity": 255,
+                    "queryable": true,
+                    "title": "energiezonen",
+                    "visibility": true
+                  }
+                ],
+                "title": "Energiezonen"
+              }
+            ],
+            "title": "Energieplan"
+          },
+          {
+            "expanded": false,
+            "mutuallyExclusive": false,
+            "name": "bglayer",
+            "sublayers": [
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.528985,
+                    47.27506,
+                    8.602431,
+                    47.298708
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "displayField": "Strasse_Nummer",
+                "geometryType": "Point",
+                "name": "tha_energiepara",
+                "opacity": 255,
+                "queryable": true,
+                "title": "tha_energiepara",
+                "visibility": true
+              },
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.543485,
+                    47.275974,
+                    8.579591,
+                    47.302341
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "displayField": "maptip",
+                "geometryType": "Point",
+                "maxScale": 5000,
+                "minScale": 0,
+                "name": "Geb\u00e4udeeingang_energie Kopie Kopie",
+                "opacity": 255,
+                "queryable": true,
+                "title": "Geb\u00e4udeeingang_energie Kopie Kopie",
+                "visibility": false
+              }
+            ],
+            "title": "bglayer"
+          }
+        ],
+        "thumbnail": "img/genmapthumbs/th_energieplan.png",
+        "title": "Energieplan",
+        "url": "https://maps-test.thalwil.ch/ows/th_energieplan",
+        "version": "1.3.0"
+      },
+      {
+        "abstract": "",
+        "additionalMouseCrs": [
+          "EPSG:21781"
+        ],
+        "attribution": {
+          "OnlineResource": "https://www.thalwil.ch",
+          "Title": "Thalwil"
+        },
+        "availableFormats": [
+          "image/jpeg",
+          "image/png",
+          "image/png; mode=16bit",
+          "image/png; mode=8bit",
+          "image/png; mode=1bit",
+          "application/dxf"
+        ],
+        "backgroundLayers": [
+          {
+            "name": "ortsplan_rtlo_wms",
+            "printLayer": "print_ortsplan_rtlo_wms",
+            "visibility": true
+          },
+          {
+            "name": "landeskarte_av",
+            "printLayer": "print_landeskarte_av",
+            "visibility": false
+          },
+          {
+            "name": "pixelkarte",
+            "printLayer": "print_pixelkarte",
+            "visibility": false
+          },
+          {
+            "name": "av_ktzh",
+            "printLayer": "print_av_ktzh",
+            "visibility": false
+          },
+          {
+            "name": "orthofoto_2014",
+            "printLayer": "print_orthofoto_2014",
+            "visibility": false
+          },
+          {
+            "name": "orthofoto_2018",
+            "printLayer": "print_orthofoto_2018",
+            "visibility": false
+          },
+          {
+            "name": "orthofoto_2021",
+            "printLayer": "print_orthofoto_2021",
+            "visibility": false
+          },
+          {
+            "name": "uep_zh",
+            "printLayer": "print_uep_zh",
+            "visibility": false
+          }
+        ],
+        "bbox": {
+          "bounds": [
+            8.546103,
+            47.285205,
+            8.568081,
+            47.299626
+          ],
+          "crs": "EPSG:4326"
+        },
+        "contact": {
+          "email": "geomatik@thalwil.ch",
+          "organization": "Geomatik",
+          "person": "Geomatik",
+          "phone": "044 723 23 06",
+          "position": ""
+        },
+        "description": "tempor\u00e4r",
+        "drawingOrder": [
+          "print_landeskarte_av",
+          "print_av_ktzh",
+          "print_pixelkarte",
+          "print_uep_zh",
+          "print_orthofoto_2014",
+          "print_orthofoto_2018",
+          "print_orthofoto_2021",
+          "print_ortsplan_rtlo_wms",
+          "baum_inventarflaeche",
+          "baumbeobachtung",
+          "baumstandort",
+          "baum_beendet",
+          "inventar_mauersegler",
+          "inventar_fledermausquartier",
+          "INLS_f_b",
+          "INLS_l_b",
+          "INLS_p_b",
+          "INSL_f",
+          "INLS_l",
+          "INLS_p"
+        ],
+        "editConfig": null,
+        "expanded": true,
+        "externalLayers": [],
+        "featureInfoUrl": "https://maps-test.thalwil.ch/ows/th_inventare?",
+        "id": "th_inventare",
+        "infoFormats": [
+          "text/plain",
+          "text/html",
+          "text/xml",
+          "application/vnd.ogc.gml",
+          "application/vnd.ogc.gml/3.1.1",
+          "application/json",
+          "application/geo+json"
+        ],
+        "initialBbox": {
+          "bounds": [
+            8.546103,
+            47.285205,
+            8.568081,
+            47.299626
+          ],
+          "crs": "EPSG:4326"
+        },
+        "keywords": "",
+        "legendUrl": "https://maps-test.thalwil.ch/ows/th_inventare?",
+        "mapCrs": "EPSG:2056",
+        "minSearchScaleDenom": 500,
+        "name": "BauGesuchsGrundlagen_Inventare",
         "onlineResource": "www.thalwil.ch",
         "print": [
           {
@@ -8685,7 +10130,7 @@
           2500,
           5000
         ],
-        "printUrl": "https://maps.thalwil.ch/ows/th_schutzinv?",
+        "printUrl": "https://maps-test.thalwil.ch/ows/th_inventare?",
         "scales": [
           50000,
           40000,
@@ -8709,14 +10154,14 @@
         ],
         "sublayers": [
           {
-            "expanded": false,
+            "expanded": true,
             "mutuallyExclusive": false,
-            "name": "Inventar_Natur_und_Landschaftsschutz_INLS",
+            "name": "InventarNaturLandschaftSchutz",
             "sublayers": [
               {
-                "expanded": false,
+                "expanded": true,
                 "mutuallyExclusive": false,
-                "name": "aktive_INLS",
+                "name": "INLS_aktiv",
                 "sublayers": [
                   {
                     "abstract": "",
@@ -8736,10 +10181,10 @@
                     "dimensions": [],
                     "displayField": "bezeichnung",
                     "geometryType": "PointZ",
-                    "name": "INLS_punkt",
+                    "name": "INLS_p",
                     "opacity": 255,
                     "queryable": true,
-                    "title": "INLS_punkt",
+                    "title": "INLS_p",
                     "visibility": true
                   },
                   {
@@ -8760,10 +10205,10 @@
                     "dimensions": [],
                     "displayField": "bezeichnung",
                     "geometryType": "CompoundCurveZ",
-                    "name": "INLS_linie",
+                    "name": "INLS_l",
                     "opacity": 255,
                     "queryable": true,
-                    "title": "INLS_linie",
+                    "title": "INLS_l",
                     "visibility": true
                   },
                   {
@@ -8784,19 +10229,19 @@
                     "dimensions": [],
                     "displayField": "bezeichnung",
                     "geometryType": "CurvePolygonZ",
-                    "name": "INSL_flaeche",
+                    "name": "INSL_f",
                     "opacity": 255,
                     "queryable": true,
-                    "title": "INSL_flaeche",
+                    "title": "INSL_f",
                     "visibility": true
                   }
                 ],
-                "title": "aktive_INLS"
+                "title": "INLS_aktiv"
               },
               {
                 "expanded": false,
                 "mutuallyExclusive": false,
-                "name": "vergangene_INLS",
+                "name": "INLS_beendet",
                 "sublayers": [
                   {
                     "abstract": "",
@@ -8816,10 +10261,10 @@
                     "dimensions": [],
                     "displayField": "bezeichnung",
                     "geometryType": "PointZ",
-                    "name": "INLS_punkt_vergangene",
+                    "name": "INLS_p_b",
                     "opacity": 255,
                     "queryable": true,
-                    "title": "INLS_punkt_vergangene",
+                    "title": "INLS_p_b",
                     "visibility": true
                   },
                   {
@@ -8840,10 +10285,10 @@
                     "dimensions": [],
                     "displayField": "bezeichnung",
                     "geometryType": "CompoundCurveZ",
-                    "name": "INLS_linie_vergangene",
+                    "name": "INLS_l_b",
                     "opacity": 255,
                     "queryable": true,
-                    "title": "INLS_linie_vergangene",
+                    "title": "INLS_l_b",
                     "visibility": true
                   },
                   {
@@ -8864,51 +10309,17 @@
                     "dimensions": [],
                     "displayField": "bezeichnung",
                     "geometryType": "CurvePolygonZ",
-                    "name": "INLS_flaeche_vergangene",
+                    "name": "INLS_f_b",
                     "opacity": 255,
                     "queryable": true,
-                    "title": "INLS_flaeche_vergangene",
+                    "title": "INLS_f_b",
                     "visibility": true
                   }
                 ],
-                "title": "vergangene_INLS"
+                "title": "INLS_beendet"
               }
             ],
-            "title": "Inventar_Natur_und_Landschaftsschutz_INLS"
-          },
-          {
-            "expanded": false,
-            "mutuallyExclusive": false,
-            "name": "Bauten_mit_Schutzstatus",
-            "sublayers": [
-              {
-                "abstract": "",
-                "attribution": {
-                  "OnlineResource": "",
-                  "Title": ""
-                },
-                "bbox": {
-                  "bounds": [
-                    8.544956,
-                    47.279209,
-                    8.579639,
-                    47.302152
-                  ],
-                  "crs": "EPSG:4326"
-                },
-                "dimensions": [],
-                "displayField": "invnummer",
-                "geometryType": "PolygonZ",
-                "maxScale": 7000,
-                "minScale": 200,
-                "name": "objekte",
-                "opacity": 255,
-                "queryable": true,
-                "title": "objekte",
-                "visibility": true
-              }
-            ],
-            "title": "Bauten_mit_Schutzstatus"
+            "title": "InventarNaturLandschaftSchutz"
           },
           {
             "expanded": false,
@@ -8931,7 +10342,7 @@
                   "crs": "EPSG:4326"
                 },
                 "dimensions": [],
-                "displayField": "t_id",
+                "displayField": "t_ili_tid",
                 "geometryType": "Point",
                 "name": "inventar_fledermausquartier",
                 "opacity": 255,
@@ -8963,7 +10374,7 @@
                   "crs": "EPSG:4326"
                 },
                 "dimensions": [],
-                "displayField": "bezeichnungid",
+                "displayField": "t_ili_tid",
                 "geometryType": "Point",
                 "name": "inventar_mauersegler",
                 "opacity": 255,
@@ -8973,11 +10384,118 @@
               }
             ],
             "title": "Mauersegler"
+          },
+          {
+            "expanded": true,
+            "mutuallyExclusive": false,
+            "name": "Baumkataster",
+            "sublayers": [
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.546512,
+                    47.280621,
+                    8.574269,
+                    47.302087
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "geometryType": "PointZ",
+                "maxScale": 2600,
+                "minScale": 200,
+                "name": "baum_beendet",
+                "opacity": 255,
+                "queryable": false,
+                "title": "baum_beendet",
+                "visibility": false
+              },
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.546367,
+                    47.279694,
+                    8.575524,
+                    47.302353
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "displayField": "bo_nameinventbez",
+                "geometryType": "PointZ",
+                "name": "baumstandort",
+                "opacity": 255,
+                "queryable": true,
+                "title": "baumstandort",
+                "visibility": true
+              },
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.546396,
+                    47.281111,
+                    8.575524,
+                    47.302353
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "displayField": "baumart_txt",
+                "geometryType": "PointZ",
+                "maxScale": 1000,
+                "minScale": 200,
+                "name": "baumbeobachtung",
+                "opacity": 255,
+                "queryable": true,
+                "title": "baumbeobachtung",
+                "visibility": true
+              },
+              {
+                "abstract": "",
+                "attribution": {
+                  "OnlineResource": "",
+                  "Title": ""
+                },
+                "bbox": {
+                  "bounds": [
+                    8.545973,
+                    47.280317,
+                    8.575702,
+                    47.302417
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "dimensions": [],
+                "displayField": "io_bezeichnung",
+                "geometryType": "PolygonZ",
+                "name": "baum_inventarflaeche",
+                "opacity": 255,
+                "queryable": true,
+                "title": "baum_inventarflaeche",
+                "visibility": true
+              }
+            ],
+            "title": "Baumkataster"
           }
         ],
-        "thumbnail": "img/genmapthumbs/th_schutzinv.png",
-        "title": "Kommunale Schutzinventare",
-        "url": "https://maps.thalwil.ch/ows/th_schutzinv",
+        "thumbnail": "img/genmapthumbs/th_inventare.png",
+        "title": "Inventare",
+        "url": "https://maps-test.thalwil.ch/ows/th_inventare",
         "version": "1.3.0"
       }
     ],
