@@ -329,6 +329,18 @@
     ],
     "mobile": [
       {
+        "name": "HomeButton",
+        "cfg": {
+          "position": 2
+        }
+      },
+      {
+        "name": "LocateButton",
+        "cfg": {
+          "position": 1
+        }
+      },
+      {
         "name": "BottomBar",
         "cfg": {
           "displayCoordinates": false,
@@ -336,9 +348,63 @@
           "viewertitleUrl": "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf",
           "termsUrl":  "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf"
         }
+      },
+      {
+        "name": "LayerTree",
+        "cfg": {
+          "showLegendIcons": false,
+          "showRootEntry": true,
+          "showQueryableIcon": true,
+          "allowMapTips": true,
+          "allowCompare": true,
+          "allowImport": true,
+          "groupTogglesSublayers": false,
+          "grayUnchecked": false,
+          "layerInfoWindowSize": {"width": 480, "height": 400},
+          "bboxDependentLegend": true,
+          "scaleDependentLegend": "theme",
+          "showToggleAllLayersCheckbox": true,
+          "extraLegendParameters": ""
+        },
+        "mapClickAction": "unset"
+      },
+      {
+        "name": "Identify",
+        "cfg": {
+          "params": {
+            "FI_POINT_TOLERANCE": 32,
+            "FI_LINE_TOLERANCE": 16,
+            "FI_POLYGON_TOLERANCE": 8,
+            "feature_count": 20,
+            "region_feature_count": 100,
+            "with_maptip": true
+          },
+          "enableExport": true,
+          "longAttributesDisplay": "wrap",
+          "displayResultTree": false,
+          "featureInfoReturnsLayerName": true,
+          "geometry": {
+            "initialWidth": 480,
+            "initialHeight": 550,
+            "initialX": 0,
+            "initialY": 0
+          }
+        }
       }
     ],
     "desktop": [
+      {
+        "name": "ZoomOut",
+        "cfg": {
+          "position": 1
+        }
+      },
+      {
+        "name": "ZoomIn",
+        "cfg": {
+          "position": 2
+        }
+      },
       {
         "name": "TaskButton",
         "cfg": {
@@ -353,18 +419,6 @@
           "position": 6,
           "task": "Editing",
           "icon": "editing"
-        }
-      },
-      {
-        "name": "ZoomIn",
-        "cfg": {
-          "position": 2
-        }
-      },
-      {
-        "name": "ZoomOut",
-        "cfg": {
-          "position": 1
         }
       },
       {
