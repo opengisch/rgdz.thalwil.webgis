@@ -138,7 +138,7 @@
               {"key": "Identify", "icon": "identify_region", "mode": "Region"},
               {"key": "Measure", "icon": "measure"},
               {"key": "Redlining", "icon": "draw"},
-              {"key": "RasterExport", "icon": "rasterexport"}
+              {"key": "MapExport", "icon": "rasterexport"}
             ]},
             {"key": "Print", "icon": "print", "shortcut": "alt+shift+p"},
             {"key": "Help", "icon": "info", "shortcut": "alt+shift+h"}
@@ -253,21 +253,28 @@
         }
       },
       {
-        "name": "DxfExport",
-        "cfg": {
-          "serviceUrl": "http://127.0.0.1:8001/ows/dxf_geobau",
-          "layerOptions": [
-            {"label": "Geobau", "layers": "dxfgeobau"},
-            {"label": "Geobau + Höhenkurven", "layers": "dxfgeobau,hoehenkurven"}
-          ],
-          "formatOptions": "MODE:SYMBOLLAYERSYMBOLOGY;SCALE:500;NO_MTEXT:TEXT"
-        }
-      },
-      {
-        "name": "RasterExport",
+        "name": "MapExport",
         "cfg": {
           "dpis": [96, 300],
-          "exportExternalLayers": true
+          "exportExternalLayers": true,
+          "defaultFormat": "image/png",
+          "formatConfiguration": {
+            "application/dxf": [
+              {
+                "name": "Geobau",
+                "extraQuery": "LAYERS=dxfgeobau",
+                "formatOptions": "MODE:SYMBOLLAYERSYMBOLOGY;SCALE:500;NO_MTEXT:TEXT"
+              },
+              {
+                "name": "Geobau + Höhenkurven",
+                "extraQuery": "LAYERS=dxfgeobau,hoehenkurven",
+                "formatOptions": "MODE:SYMBOLLAYERSYMBOLOGY;SCALE:500;NO_MTEXT:TEXT"
+              }
+            ],
+            "image/png": [
+              {"name": "default"}
+            ]
+          }
         }
       },
       {
