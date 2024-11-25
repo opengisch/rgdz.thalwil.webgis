@@ -12,6 +12,9 @@ import CoordinatesUtils from 'qwc2/utils/CoordinatesUtils';
 import IdentifyUtils from 'qwc2/utils/IdentifyUtils';
 import {SearchResultType} from 'qwc2/actions/search';
 
+// When working locally, send requests to proxy at 8888 to prevent CORS issues
+const DEV_PROXY_HOST = 'http://localhost:8888';
+
 function coordinatesSearch(text, searchParams, callback) {
     const displaycrs = searchParams.displaycrs || "EPSG:4326";
     const matches = text.match(/^\s*([+-]?\d+\.?\d*)[,\s]\s*([+-]?\d+\.?\d*)\s*$/);
@@ -339,7 +342,7 @@ function hydrantSearch(text, searchParams, callback, axios){
     // I have to change the url to the actual QGIS server url.
     let host = '';
     if (window.location.host == 'localhost:8080') {
-        host = 'http://localhost:8888';
+        host = DEV_PROXY_HOST;
     }
 
     // I use format xml instead of json because json responses seem to be very bugged in QGIS server
@@ -381,7 +384,7 @@ function propertySearch(text, searchParams, callback, axios){
     // I have to change the url to the actual QGIS server url.
     let host = '';
     if (window.location.host == 'localhost:8080') {
-        host = 'http://localhost:8888';
+        host = DEV_PROXY_HOST;
     }
 
     // I use format xml instead of json because json responses seem to be very bugged in QGIS server
@@ -422,7 +425,7 @@ function entranceSearch(text, searchParams, callback, axios){
     // I have to change the url to the actual QGIS server url.
     let host = '';
     if (window.location.host == 'localhost:8080') {
-        host = 'http://localhost:8888';
+        host = DEV_PROXY_HOST;
     }
 
     // I use format xml instead of json because json responses seem to be very bugged in QGIS server
