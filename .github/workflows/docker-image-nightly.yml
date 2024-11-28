@@ -24,6 +24,6 @@ jobs:
         with:
           context: ./
           # do not push for the moment, to avoid load
-          # push: true
+          push: true
           tags: ghcr.io/${{ github.repository }}:${{ github.head_ref }}-${{ github.sha }}
           target: prod
