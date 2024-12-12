@@ -264,18 +264,6 @@
           "exportExternalLayers": true,
           "defaultFormat": "image/png",
           "formatConfiguration": {
-            "application/dxf": [
-              {
-                "name": "Geobau",
-                "extraQuery": "LAYERS=dxfgeobau",
-                "formatOptions": "MODE:SYMBOLLAYERSYMBOLOGY;SCALE:500;NO_MTEXT:TEXT"
-              },
-              {
-                "name": "Geobau + Höhenkurven",
-                "extraQuery": "LAYERS=dxfgeobau,hoehenkurven",
-                "formatOptions": "MODE:SYMBOLLAYERSYMBOLOGY;SCALE:500;NO_MTEXT:TEXT"
-              }
-            ],
             "image/png": [
               {"name": "default"}
             ]
