@@ -160,9 +160,8 @@
       {
         "name": "BottomBar",
         "cfg": {
-          "viewertitleUrl": "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf",
           "termsUrl": "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf",
-          "viewertitleUrlTarget": "_blank"
+          "termsUrlTarget": "_blank"
         }
       },
       {
@@ -348,8 +347,8 @@
         "cfg": {
           "displayCoordinates": false,
           "displayScales": false,
-          "viewertitleUrl": "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf",
-          "termsUrl":  "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf"
+          "termsUrl": "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf",
+          "termsUrlTarget": "_blank"
         }
       },
       {
