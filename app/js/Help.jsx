@@ -16,7 +16,10 @@ export function renderHelp() {
             </div>
             <div>QWC2 build {process.env.BuildDate}</div>
             <div>
-                <a href={process.env.QWC2RepoSource}>Verwendete QWC2 Version</a>
+                <a href={process.env.QWC2RepoSource} target="_blank">Verwendete QWC2 Version</a>
+            </div>
+            <div>
+                <a href="https://qwc-services.github.io/master/release_notes/ChangeLog/" target="_blank">Changelog</a>
             </div>
         </div>
     );

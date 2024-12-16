@@ -10,7 +10,7 @@
   "routingServiceUrl": "",
   "urlPositionFormat": "centerAndZoom",
   "urlPositionCrs": "",
-  "loadTranslationOverrides": false,
+  "loadTranslationOverrides": true,
   "omitUrlParameterUpdates": false,
   "preserveExtentOnThemeSwitch": true,
   "preserveBackgroundOnThemeSwitch": true,
@@ -161,7 +161,9 @@
         "name": "BottomBar",
         "cfg": {
           "termsUrl": "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf",
-          "termsUrlTarget": "_blank"
+          "termsUrlTarget": "_blank",
+          "viewertitleUrl": "https://maps.thalwil.ch/static_files/th_tools/index.html",
+          "viewertitleUrlTarget": "_blank"
         }
       },
       {
@@ -336,7 +338,9 @@
           "displayCoordinates": false,
           "displayScales": false,
           "termsUrl": "https://maps.thalwil.ch/static_files/help/nutzungsbedingungen.pdf",
-          "termsUrlTarget": "_blank"
+          "termsUrlTarget": "_blank",
+          "viewertitleUrl": "https://maps.thalwil.ch/static_files/th_tools/index.html",
+          "viewertitleUrlTarget": "_blank"
         }
       },
       {
