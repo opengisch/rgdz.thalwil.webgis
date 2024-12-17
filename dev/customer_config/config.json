@@ -262,13 +262,11 @@
       {
         "name": "MapExport",
         "cfg": {
+          "allowedFormats": ["image/png", "image/jpeg"],
           "dpis": [96, 300],
           "exportExternalLayers": true,
           "defaultFormat": "image/png",
           "formatConfiguration": {
-            "image/png": [
-              {"name": "default"}
-            ]
           }
         }
       },
